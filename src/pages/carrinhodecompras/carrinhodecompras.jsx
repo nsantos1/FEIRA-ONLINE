@@ -64,9 +64,9 @@ const ProdutoCard = memo(({ produto, onAdicionar, desabilitado }) => (
   <div className="product-card">
     <img src={produto.imagem} alt={produto.nome} className="product-card__image" />
     <h4 className="product-card__name">{produto.nome}</h4>
-    <p className="product-card__price">R$ {produto.preco.toFixed(2)}</p>
+    <p className="preco-produto">R$ {produto.preco.toFixed(2)}</p>
     <button
-      className="product-card__button"
+      className="botao-verde"
       onClick={() => onAdicionar(produto)}
       disabled={desabilitado}
     >
@@ -117,14 +117,14 @@ const CarrinhoDeCompras = () => {
                     <img src={item.imagem} alt={item.nome} className="cart-item__image" />
                     <div className="cart-item__details">
                       <h3>{item.nome}</h3>
-                      <p>R$ {item.preco.toFixed(2)}</p>
+                      <p>Preço Unitário: R$ {item.preco.toFixed(2)}</p>
                     </div>
-                    <div className="cart-item__quantity">
+                    <div className="ajustador-quantidade">
                       <button onClick={() => alterarQuantidade(item.id, item.quantidade - 1, item.estoque)} disabled={item.quantidade <= 1}>
                         <i className="fas fa-minus"></i>
                       </button>
                       <span>{item.quantidade}</span>
-                      <button onClick={() => alterarQuantidade(item.id, item.quantidade + 1, item.estoque)} disabled={item.quantidade >= item.estoque}>
+                      <button onClick={() => alterarQuantidade(item.id, item.quantidade + 1, item.estoque)} disabled={item.quantidade >= item.estoque} className=''>
                         <i className="fas fa-plus"></i>
                       </button>
                     </div>
@@ -138,9 +138,9 @@ const CarrinhoDeCompras = () => {
                 ))}
               </div>
 
-              <div className="cart-summary">
+              <div className="resumo-pedido">
                 <h2>Resumo do Pedido</h2>
-                <div className="cart-summary__total">
+                <div className="total-pedido">
                   <span>Total</span>
                   <span>R$ {total.toFixed(2)}</span>
                 </div>
