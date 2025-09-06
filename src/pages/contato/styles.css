@@ -1,0 +1,236 @@
+/* Container principal da página de contato */
+.contact-page-container {
+  padding: 4rem 9%;
+  background-color: #fff;
+  font-family: var(--fonte-secundaria); /* Garante a fonte Poppins */
+}
+
+/* Seção do cabeçalho de contato */
+.contact-header-section {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-subtitle {
+  font-size: 0.9rem;
+  color: var(--cor-secundaria-fonte);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.contact-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--cor-primaria-fonte);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.contact-description {
+  font-size: 1rem;
+  color: var(--cor-terciaria-fonte);
+  line-height: 1.6;
+}
+
+/* Wrapper do conteúdo principal (informações e formulário) */
+.contact-content-wrapper {
+  display: flex;
+  gap: 3rem; /* Espaçamento entre as seções */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Coluna da Esquerda: Informações de Contato */
+.contact-info-section {
+  flex: 1;
+  min-width: 320px;
+}
+
+.info-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--cor-primaria-fonte);
+  margin-bottom: 1.5rem;
+}
+
+.info-description {
+  font-size: 0.95rem;
+  color: var(--cor-terciaria-fonte);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.office-locations {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 2.5rem;
+}
+
+.office-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--cor-primaria-fonte);
+  margin-bottom: 0.5rem;
+}
+
+.office-card p,
+.office-card a {
+  font-size: 0.95rem;
+  color: var(--cor-secundaria-fonte);
+  margin-bottom: 0.3rem;
+  text-decoration: none;
+}
+
+.office-card a {
+    color: var(--cor-hover); /* Usando a cor verde do site */
+    font-weight: 500;
+}
+
+.office-card a:hover {
+  text-decoration: underline;
+}
+
+.contact-social-media span {
+  font-weight: 600;
+  color: var(--cor-primaria-fonte);
+  margin-right: 1rem;
+}
+
+.social-icons {
+  display: inline-flex;
+  gap: 1rem;
+  vertical-align: middle;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-primaria-fonte);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: var(--cor-hover);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Coluna da Direita: Formulário de Contato */
+.contact-form-section {
+  flex: 1.5;
+  min-width: 350px;
+}
+
+.form-intro-text {
+  font-size: 0.95rem;
+  color: var(--cor-terciaria-fonte);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group-inline {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 200px;
+}
+
+.form-field label {
+  font-size: 0.9rem;
+  color: var(--cor-primaria-fonte);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: var(--cor-primaria-fonte);
+  background-color: var(--cor-secundaria);
+  transition: all 0.3s ease;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--cor-hover);
+  box-shadow: 0 0 0 3px rgba(85, 175, 0, 0.2);
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.send-message-button {
+  padding: 1rem 1.5rem;
+  background-color: var(--cor-hover);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.send-message-button:hover {
+  background-color: #4a9400; 
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+@media (max-width: 992px) {
+    .contact-content-wrapper {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+  .contact-page-container {
+    padding: 2rem 5%;
+  }
+
+  .contact-title {
+    font-size: 2.2rem;
+  }
+
+  .form-group-inline {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .send-message-button {
+    width: 100%;
+  }
+}

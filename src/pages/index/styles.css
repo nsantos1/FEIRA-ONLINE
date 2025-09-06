@@ -1,0 +1,298 @@
+/* banner*/
+.banner {
+  background-image: url(../../assets/images/index/banner/banner-home.png);
+  background-size: cover;
+  background-position: center;
+  height: 50vh; /* Tamanho do banner ocupando toda a tela */
+  display: flex;
+  align-items: center;
+  padding-left: 9%;
+  color: white;
+  position: relative;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Sobreposição pra dar contraste ao texto */
+  z-index: 1;
+}
+
+.texto-banner {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.texto-banner h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.texto-banner p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.botao {
+  background-color: #2ecc71;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+  background-color: var(--cor-hover);
+}
+
+/*conteudo da home*/
+.categorias {
+  padding: 40px 60px;
+}
+
+/* Seção Categorias */
+.categorias-titulo {
+  font-size: 24px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.categorias-produtos {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+
+.categorias-produto_link {
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.categorias-produto_link:hover {
+  transform: scale(1.05);
+}
+
+.categorias-produto_link img {
+  width: 190px;
+  height: 190px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.categorias-produto_texto {
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Texto Informativo */
+.texto-informativo {
+  background-color: #e9f5eb;
+  padding: 30px 9%;
+  border-radius: 10px;
+  margin: 50px 0;
+}
+
+.texto-informativo h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #1b1b1b;
+  text-align: center;
+}
+
+/* Alinha todos os blocos na horizontal */
+.texto-informativo_paragrafo {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  margin-right: 3%;
+  min-width: 200px;
+}
+
+/* Ícone + título (primeira linha de cada bloco) */
+.texto-informativo_paragrafo p:first-child {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #1e7e34;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Descrição do benefício */
+.texto-informativo_paragrafo p:last-child {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+}
+
+/* Ícones */
+.texto-informativo_paragrafo i {
+  font-size: 18px;
+  color: #1e7e34;
+}
+
+.video-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-container h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
+}
+
+/* Localização */
+.localizacao {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.localizacao-texto {
+  max-width: 400px;
+}
+
+.localizacao-titulo {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.localizacao-paragrafo {
+  font-size: 20px;
+  color: #555;
+}
+
+#mapa {
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Tablet (até 1024px) */
+@media (max-width: 1024px) {
+  .categorias-produto_link img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .texto-informativo_paragrafo {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+
+  .localizacao {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .localizacao-texto {
+    max-width: 100%;
+  }
+}
+
+/* Celulares (até 768px) */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding-left: 0;
+    padding: 20px;
+    height: auto;
+  }
+
+  .texto-banner h1 {
+    font-size: 2rem;
+  }
+
+  .texto-banner p {
+    font-size: 1rem;
+  }
+
+  .categorias {
+    padding: 20px;
+  }
+
+  .categorias-produtos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .categorias-produto_link img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+  }
+
+  .texto-informativo {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .texto-informativo_paragrafo {
+    width: 100%;
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  .texto-informativo_paragrafo p:first-child {
+    justify-content: center;
+  }
+
+  .localizacao {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .localizacao-titulo {
+    font-size: 22px;
+  }
+
+  .localizacao-paragrafo {
+    font-size: 16px;
+  }
+
+  #mapa {
+    width: 100%;
+    max-width: 100%;
+    height: 220px;
+  }
+}

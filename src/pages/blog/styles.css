@@ -1,0 +1,316 @@
+.main-blog {
+  margin-bottom: 3rem;
+}
+
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.blog-categorias,
+.blog-destaques,
+.blog-recentes {
+  display: flex;
+  flex-direction: column;
+  padding: 0 9%;
+  margin: 1.5rem 0;
+  gap: 1rem;
+}
+
+.blog-categorias-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.blog-destaques-container,
+.blog-recentes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.blog-destaques-container {
+  justify-content: space-between;
+}
+
+.blog-recentes-container {
+  margin-top: 3rem;
+  justify-content: space-between;
+}
+
+.blog-recentes-principal {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.blog-recentes-card {
+  max-width: 22rem;
+}
+
+.blog-recentes-card:hover {
+  transform: scale(1.05);
+  transition: 0.1s all ease-in-out;
+}
+
+.blog-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+  background-image: url(https://images.unsplash.com/photo-1502741338009-cac2772e18bc?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-size: cover;
+  padding: 6rem 9%;
+}
+
+.blog-banner p {
+  font-weight: 400;
+}
+
+.main-blog hr {
+  height: 2px;
+  background-color: rgb(226, 226, 226);
+  margin: 0 0 0.2rem 0;
+}
+
+.blog-categorias h3,
+.blog-destaques h3,
+.blog-recentes h3 {
+  display: flex;
+  flex-direction: column;
+  color: rgb(100, 100, 100);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.blog-destaques-item-titulo a,
+.blog-recentes-card-titulo,
+.blog-recentes-item-descricao a {
+  color: var(--cor-primaria-fonte);
+  font-weight: 600;
+}
+
+.blog-destaques-item-titulo a:hover,
+.blog-recentes-card-titulo:hover,
+.blog-recentes-item-descricao a:hover {
+  color: var(--cor-hover);
+}
+
+.blog-recentes-item-descricao a {
+  font-size: 2rem;
+}
+
+.blog-recentes-item-descricao p,
+.blog-recentes-card-descricao {
+  color: rgb(70, 70, 70);
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+.blog-categorias-container a {
+  padding: 4.5rem 0;
+  border-radius: 16px;
+  width: 100%;
+}
+
+.blog-categorias-container a:hover {
+  transform: scale(1.02);
+  transition: 0.1s all ease-in-out;
+  box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+.blog-categorias-container a h4 {
+  background-color: rgba(226, 226, 226, 0.85);
+  width: fit-content;
+  margin: auto;
+  color: var(--cor-primaria-fonte);
+  font-weight: 600;
+  padding: 0.2rem 1rem;
+  border-radius: 16px;
+  font-size: 0.85rem;
+}
+
+.blog-recentes-principal img,
+.blog-recentes-card img {
+  border-radius: 16px;
+}
+
+.blog-recentes-principal img {
+  max-width: 25rem;
+}
+
+.blog-recentes-card img {
+  max-width: inherit;
+}
+
+.blog-destaques-item,
+.blog-recentes-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.blog-destaques-item {
+  width: 30rem;
+  margin: 0;
+}
+
+.blog-destaques-item-info,
+.blog-recentes-item-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.blog-recentes-item-info {
+  margin: 0.6rem 0;
+}
+
+.blog-destaques-item-info a,
+.blog-recentes-item-info a {
+  color: rgb(122, 122, 122);
+  font-weight: 500;
+  font-size: 0.75rem;
+  background-color: rgb(236, 236, 236);
+  padding: 0.2rem 0.5rem;
+  border-radius: 16px;
+}
+
+.blog-destaques-item-info a:hover,
+.blog-recentes-item-info a:hover {
+  color: rgb(75, 75, 75);
+  background-color: rgb(223, 223, 223);
+}
+
+.blog-destaques-item-info p,
+.blog-recentes-item-info p {
+  color: rgb(122, 122, 122);
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.blog-categorias-card-1 {
+  background: url(https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+}
+
+.blog-categorias-card-2 {
+  background: url(https://images.unsplash.com/photo-1604719312566-8912e9227c6a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+}
+
+.blog-categorias-card-3 {
+  background: url(https://images.unsplash.com/photo-1568254183919-78a4f43a2877?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .blog-banner {
+    font-size: 1.5rem;
+    padding: 2rem 5%;
+    text-align: center;
+  }
+
+  .blog-categorias-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-categorias-container a {
+    width: 100%;
+    padding: 3rem 0;
+  }
+
+  .blog-destaques-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-destaques-item {
+    width: 90%;
+  }
+
+  .blog-recentes-principal {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .blog-recentes-principal img {
+    max-width: 100%;
+  }
+
+  .blog-recentes-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .blog-recentes-card {
+    max-width: 100%;
+  }
+
+  .blog-recentes-item-descricao a {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .blog-banner {
+    font-size: 1.75rem;
+    padding: 2.5rem 7%;
+    text-align: center;
+  }
+
+  .blog-categorias-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .blog-categorias-container a {
+    padding: 4rem 0;
+  }
+
+  .blog-destaques-container {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .blog-destaques-item {
+    width: 80%;
+  }
+
+  .blog-recentes-principal {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-recentes-principal img {
+    max-width: 100%;
+  }
+
+  .blog-recentes-container {
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .blog-recentes-card {
+    max-width: 80%;
+  }
+
+  .blog-recentes-card img {
+    max-width: 100%;
+  }
+
+  .blog-recentes-item-descricao a {
+    font-size: 1.5rem;
+  }
+}

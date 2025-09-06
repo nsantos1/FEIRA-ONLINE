@@ -1,0 +1,213 @@
+.banner-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 12rem 5%;
+  background: url(https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1613&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+    no-repeat center/cover;
+  color: white;
+  text-align: center;
+  font-family: var(--fonte-secundaria);
+  font-weight: 600;
+  font-size: 2.5rem;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.banner-about p {
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+
+.conteudo-about {
+  margin: 2rem 5%;
+  padding: 1.25rem 5%;
+  text-align: center;
+  gap: 1rem;
+}
+
+.conteudo-about h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.conteudo-about p {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  flex-wrap: wrap;
+}
+
+.sobre-conteudo-about {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.linha-about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.linha-about h3 {
+  margin-bottom: 0.5rem;
+}
+
+.linha-about div {
+  width: 100%;
+  max-width: 48%;
+}
+
+.video-pitch h3 {
+  margin-bottom: 1rem;
+}
+
+.video-pitch a img {
+  margin: auto;
+  width: 100%;
+  max-width: 65rem;
+  border-radius: 12px;
+  transition: 0.15s all;
+}
+
+.video-pitch a img:hover {
+  transform: scale(1.025);
+}
+
+.time-about {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.time-about-integrantes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card-integrante {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 12rem;
+  transition: 0.1s all;
+}
+
+.card-integrante:hover {
+  transform: scale(1.05);
+}
+
+.card-integrante img {
+  width: 10rem;
+  border-radius: 50%;
+  transition: 0.1s all;
+}
+
+.card-integrante:hover img {
+  border-radius: 15px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.card-integrante a {
+  color: var(--cor-primaria-fonte);
+}
+
+.card-integrante p {
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+main hr {
+  height: 2px;
+  background-color: rgb(226, 226, 226);
+  margin: 2rem 0;
+}
+
+@media (max-width: 1024px) {
+  .banner-about {
+    font-size: 2rem;
+    padding: 6rem 5%;
+  }
+
+  .banner-about p {
+    font-size: 1.1rem;
+  }
+
+  .conteudo-about {
+    padding: 1.25rem 2rem;
+  }
+
+  .linha-about div {
+    max-width: 100%;
+    margin-bottom: 1.25rem;
+  }
+
+  .time-about-integrantes {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-about {
+    font-size: 1.8rem;
+    padding: 5rem 3%;
+  }
+
+  .banner-about p {
+    font-size: 1rem;
+  }
+
+  .conteudo-about {
+    margin: 1.5rem 3%;
+    padding: 1rem 1.5rem;
+  }
+
+  .video-pitch a img {
+    max-width: 100%;
+  }
+
+  .card-integrante {
+    width: 10rem;
+  }
+
+  .card-integrante img {
+    width: 8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-about {
+    font-size: 1.5rem;
+    padding: 4rem 2%;
+  }
+
+  .banner-about p {
+    font-size: 0.9rem;
+  }
+
+  .conteudo-about h3 {
+    font-size: 1.25rem;
+  }
+
+  .conteudo-about p {
+    font-size: 0.95rem;
+  }
+
+  .time-about {
+    gap: 2rem;
+  }
+
+  .card-integrante {
+    width: 100%;
+    max-width: 14rem;
+  }
+
+  .card-integrante img {
+    width: 7rem;
+  }
+}
