@@ -100,7 +100,7 @@ export default function About() {
                 target="_blank"
                 class="banner-youtube"
               >
-                <img src="src\assets\fiap.png" alt="Assista no YouTube" />
+                <img src="../src/assets/fiap.png" alt="Assista no YouTube" />
               </a>
             </div>
           </div>

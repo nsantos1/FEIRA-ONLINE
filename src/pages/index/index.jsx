@@ -34,7 +34,7 @@ export default function Index() {
             <div className="categorias-produto">
               <a className="categorias-produto_link" href="#">
                 <img
-                  src="src/assets/images/index/cestodefruta.jpg"
+                  src="../src/assets/images/index/cestodefruta.jpg"
                   alt="Cesto de fruta"
                 />
                 <p className="categorias-produto_texto"> Frutas</p>
@@ -43,7 +43,7 @@ export default function Index() {
             <div className="categorias-produto">
               <a className="categorias-produto_link" href="#">
                 <img
-                  src="src/assets/images/index/vegetais.jpeg"
+                  src="../src/assets/images/index/vegetais.jpeg"
                   alt="Vegetais"
                 />
                 <p className="categorias-produto_texto"> Vegetais</p>
@@ -52,7 +52,7 @@ export default function Index() {
             <div className="categorias-produto">
               <a className="categorias-produto_link" href="#">
                 <img
-                  src="src/assets/images/index/Laticinios.png"
+                  src="../src/assets/images/index/Laticinios.png"
                   alt="Laticínios"
                 />
                 <p className="categorias-produto_texto"> Laticínios</p>
@@ -60,7 +60,7 @@ export default function Index() {
             </div>
             <div className="categorias-produto">
               <a className="categorias-produto_link" href="#">
-                <img src="src/assets/images/index/graos.jpg" alt="Grãos" />
+                <img src="../src/assets/images/index/graos.jpg" alt="Grãos" />
                 <p className="categorias-produto_texto"> Grãos</p>
               </a>
             </div>
