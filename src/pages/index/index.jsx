@@ -34,7 +34,7 @@ export default function Index() {
             <div className="categorias-produto">
               <a className="categorias-produto_link" href="#">
                 <img
-                  src="../src/assets/images/index/cestodefruta.jpg"
+                  src="https://images.unsplash.com/photo-1701374930119-78a86eb6befc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Cesto de fruta"
                 />
                 <p className="categorias-produto_texto"> Frutas</p>
