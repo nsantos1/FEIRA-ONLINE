@@ -1,11 +1,11 @@
-import Banner from "../../components/Blog/bannerBlog";
+import Banner from "../../components/blog/bannerBlog";
 import {
   CardPostRecente,
   PostDestaque,
   PostRecenteDestaque,
-} from "../../components/Blog/cardsBlog";
-import Footer from "../../components/Footer/footer";
-import Header from "../../components/Header/header";
+} from "../../components/blog/cardsBlog";
+import Footer from "../../components/footer/footer";
+import Header from "../../components/header/header";
 import "./styles.css";
 
 export default function Blog() {

@@ -1,7 +1,7 @@
 import './style.css';
 import React, { useState, useReducer, useMemo, useCallback, memo } from 'react';
-import Header from '../../components/Header/header';
-import Footer from '../../components/Footer/footer';
+import Header from '../../components/header/header';
+import Footer from '../../components/footer/footer';
 
 
 const produtos = [

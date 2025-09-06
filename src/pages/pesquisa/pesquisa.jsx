@@ -1,6 +1,6 @@
-import Footer from "../../components/Footer/footer";
-import Header from "../../components/Header/header";
-import CardProdutoFavorito from "../../components/Produtos-Favoritos/cardProdutoFavorito";
+import Footer from "../../components/footer/footer";
+import Header from "../../components/header/header";
+import CardProdutoFavorito from "../../components/produtosFavoritos/cardProdutoFavorito";
 import "./styles.css";
 
 export default function Pesquisa() {

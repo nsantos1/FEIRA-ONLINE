@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import Footer from "../../components/Footer/footer";
-import Header from "../../components/Header/header";
+import Footer from "../../components/footer/footer";
+import Header from "../../components/header/header";
 import "./styles.css";
 import initMap from "../../../api/mapa"; // importa sua função de mapa
 

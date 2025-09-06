@@ -1,7 +1,7 @@
-import BannerAbout from "../../components/About/bannerAbout";
-import CardIntegrante from "../../components/About/cardIntegrante";
-import Footer from "../../components/Footer/footer";
-import Header from "../../components/Header/header";
+import BannerAbout from "../../components/about/bannerAbout";
+import CardIntegrante from "../../components/about/cardIntegrante";
+import Footer from "../../components/footer/footer";
+import Header from "../../components/header/header";
 import "./styles.css";
 
 export default function About() {

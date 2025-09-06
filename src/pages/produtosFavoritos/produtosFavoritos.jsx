@@ -1,8 +1,8 @@
 import "./styles.css";
-import Footer from "../../components/Footer/footer";
-import Header from "../../components/Header/header";
-import SemProdutosFavoritos from "../../components/Produtos-Favoritos/divSemProdutosFavoritos";
-import CardProdutoFavorito from "../../components/Produtos-Favoritos/cardProdutoFavorito";
+import Footer from "../../components/footer/footer";
+import Header from "../../components/header/header";
+import SemProdutosFavoritos from "../../components/produtosFavoritos/divSemProdutosFavoritos";
+import CardProdutoFavorito from "../../components/produtosFavoritos/cardProdutoFavorito";
 
 export default function ProdutosFavoritos() {
   return (
