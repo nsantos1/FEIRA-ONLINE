@@ -100,7 +100,7 @@ export default function About() {
                 target="_blank"
                 class="banner-youtube"
               >
-                <img src="../src/assets/fiap.png" alt="Assista no YouTube" />
+                <img src="https://www.fiap.com.br/wp-content/themes/fiap2016/images/sharing/fiap.png" alt="Assista no YouTube" />
               </a>
             </div>
           </div>

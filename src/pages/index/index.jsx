@@ -43,7 +43,7 @@ export default function Index() {
             <div className="categorias-produto">
               <a className="categorias-produto_link" href="#">
                 <img
-                  src="../src/assets/images/index/vegetais.jpeg"
+                  src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Vegetais"
                 />
                 <p className="categorias-produto_texto"> Vegetais</p>
@@ -52,7 +52,7 @@ export default function Index() {
             <div className="categorias-produto">
               <a className="categorias-produto_link" href="#">
                 <img
-                  src="../src/assets/images/index/Laticinios.png"
+                  src="https://images.unsplash.com/photo-1646834355190-0a48e7c760e1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Laticínios"
                 />
                 <p className="categorias-produto_texto"> Laticínios</p>
@@ -60,7 +60,7 @@ export default function Index() {
             </div>
             <div className="categorias-produto">
               <a className="categorias-produto_link" href="#">
-                <img src="../src/assets/images/index/graos.jpg" alt="Grãos" />
+                <img src="https://images.unsplash.com/photo-1698845650846-4119019ddf05?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Grãos" />
                 <p className="categorias-produto_texto"> Grãos</p>
               </a>
             </div>
