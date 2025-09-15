@@ -2,26 +2,30 @@ import "./header.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
+const categorias = [
+  "Frutas e Verduras", "Bebê e Gravidez", "Bebidas", "Carnes e Frutos do Mar",
+  "Biscoitos e Snacks", "Pães e Padaria", "Café da Manhã e Laticínios",
+  "Congelados", "Mercearia e Básicos", "Saúde", "Produtos para o Lar",
+];
+
 export default function Header() {
   const [termoPesquisa, setTermoPesquisa] = useState("");
   const navigate = useNavigate();
+  
+  const [submenuVisivel, setSubmenuVisivel] = useState(false);
 
-  // Função para lidar com a pesquisa
   const handleSearch = (event) => {
-    if (event.key === "Enter") {
-      if (termoPesquisa.toLowerCase() === "milho") {
-        navigate("/pesquisa");
-      }
+    // Se o usuário pressionar Enter e o campo não estiver vazio
+    if (event.key === "Enter" && termoPesquisa.trim() !== "") {
+      // Navega para a página de pesquisa, passando o termo como um parâmetro na URL
+      navigate(`/pesquisa?q=${encodeURIComponent(termoPesquisa)}`);
     }
   };
 
   return (
     <header>
       <div className="linha-1-header">
-        <Link className="logo" to="/">
-          FeiraOnline.
-        </Link>
-
+        <Link className="logo" to="/">FeiraOnline.</Link>
         <input
           className="pesquisa"
           type="search"
@@ -31,69 +35,32 @@ export default function Header() {
           onChange={(e) => setTermoPesquisa(e.target.value)}
           onKeyDown={handleSearch}
         />
-
         <div className="header-icons">
-          <Link to="/logineregistro" aria-label="Área do usuário">
-            <i className="fa-regular fa-user"></i>
-          </Link>
-          <Link to="/favoritos" aria-label="Favoritos">
-            <i className="fa-regular fa-heart"></i>
-          </Link>
-          <Link to="/carrinho" aria-label="Carrinho de compras">
-            <i className="fa-solid fa-cart-shopping"></i>
-          </Link>
+          <Link to="/logineregistro" aria-label="Área do usuário"><i className="fa-regular fa-user"></i></Link>
+          <Link to="/favoritos" aria-label="Favoritos"><i className="fa-regular fa-heart"></i></Link>
+          <Link to="/carrinho" aria-label="Carrinho de compras"><i className="fa-solid fa-cart-shopping"></i></Link>
         </div>
       </div>
-
       <nav>
         <ul>
-          <li>
-            <a href="#">Produtos</a>
-            <ul className="submenu">
-              <li>
-                <a href="#">Frutas e Verduras</a>
-              </li>
-              <li>
-                <a href="#">Bebê e Gravidez</a>
-              </li>
-              <li>
-                <a href="#">Bebidas</a>
-              </li>
-              <li>
-                <a href="#">Carnes e Frutos do Mar</a>
-              </li>
-              <li>
-                <a href="#">Biscoitos e Snacks</a>
-              </li>
-              <li>
-                <a href="#">Pães e Padaria</a>
-              </li>
-              <li>
-                <a href="#">Café da Manhã e Laticínios</a>
-              </li>
-              <li>
-                <a href="#">Congelados</a>
-              </li>
-              <li>
-                <a href="#">Mercearia e Básicos</a>
-              </li>
-              <li>
-                <a href="#">Saúde</a>
-              </li>
-              <li>
-                <a href="#">Produtos para o Lar</a>
-              </li>
+          <li 
+            onMouseEnter={() => setSubmenuVisivel(true)} 
+            onMouseLeave={() => setSubmenuVisivel(false)}
+          >
+            <Link to="/produtos">Produtos</Link>
+            <ul className={`submenu ${submenuVisivel ? 'submenu-visivel' : ''}`}>
+              {categorias.map((categoria, index) => (
+                <li key={index}>
+                  <Link to={`/produtos?categoria=${encodeURIComponent(categoria)}`}>
+                    {categoria}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </li>
-          <li>
-            <Link to="/blog">Blog</Link>
-          </li>
-          <li>
-            <Link to="/sobre">Sobre Nós</Link>
-          </li>
-          <li>
-            <Link to="/contato">Contato</Link>
-          </li>
+          <li><Link to="/blog">Blog</Link></li>
+          <li><Link to="/sobre">Sobre Nós</Link></li>
+          <li><Link to="/contato">Contato</Link></li>
         </ul>
       </nav>
     </header>

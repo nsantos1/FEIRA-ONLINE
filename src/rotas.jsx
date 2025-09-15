@@ -7,7 +7,8 @@ import ProdutosFavoritos from "./pages/produtosFavoritos/produtosFavoritos.jsx";
 import CarrinhoDeCompras from "./pages/carrinhodecompras/carrinhodecompras.jsx";
 import Blog from "./pages/blog/blog.jsx";
 import Contato from "./pages/contato/contact.jsx";
-import Pesquisa from "./pages/pesquisa/pesquisa.jsx"; // Importa a nova página
+import Pesquisa from "./pages/pesquisa/pesquisa.jsx";
+import Produtos from "./pages/produtos/produtos.jsx"; 
 
 const Rotas = () => {
   return (
@@ -20,7 +21,8 @@ const Rotas = () => {
         <Route path="/carrinho" element={<CarrinhoDeCompras />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contato" element={<Contato />} />
-        <Route path="/pesquisa" element={<Pesquisa />} /> {/* Adiciona a rota de pesquisa */}
+        <Route path="/pesquisa" element={<Pesquisa />} />
+        <Route path="/produtos" element={<Produtos />} /> 
       </Routes>
     </BrowserRouter>
   );

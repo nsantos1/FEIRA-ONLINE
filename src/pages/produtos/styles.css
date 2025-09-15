@@ -1,0 +1,107 @@
+/* src/pages/produtos/styles.css */
+
+.products-page-main {
+  padding: 2rem 9%;
+  background-color: #f9fafb; /* Um fundo suave para a página */
+}
+
+.products-page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.products-page-header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--cor-primaria-fonte);
+  margin-bottom: 0.5rem;
+}
+
+.products-page-header p {
+  font-size: 1.1rem;
+  color: var(--cor-secundaria-fonte);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.products-page-content {
+  display: flex;
+  align-items: flex-start; /* Alinha o início da sidebar e da grade */
+  gap: 2rem;
+}
+
+.products-grid-container {
+  flex: 1; /* Ocupa o espaço restante */
+}
+
+.products-grid-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  color: var(--cor-secundaria-fonte);
+  font-weight: 500;
+}
+
+.products-grid {
+  display: grid;
+  /* Cria colunas responsivas: no mínimo 250px, preenchendo o espaço */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 1024px) {
+  .products-sidebar {
+    /* Em telas menores, a sidebar pode ser ocultada ou ter um comportamento diferente.
+       Por enquanto, vamos mantê-la, mas ajustando o espaçamento da página. */
+    width: 220px;
+  }
+  .products-page-main {
+    padding: 2rem 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-page-content {
+    flex-direction: column; /* Empilha a sidebar e a grade */
+  }
+
+  .products-sidebar {
+    width: 100%; /* Ocupa a largura total */
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+    padding-right: 0;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .products-page-header h1 {
+    font-size: 2.2rem;
+  }
+}
+
+
+.no-products-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--cor-secundaria-fonte);
+  width: 100%;
+  min-height: 400px;
+}
+
+.no-products-found i {
+  font-size: 4rem;
+  color: var(--cor-terciaria-fonte);
+  margin-bottom: 1.5rem;
+}
+
+.no-products-found h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--cor-primaria-fonte);
+  margin-bottom: 0.5rem;
+}

@@ -1,19 +1,50 @@
+.pesquisa-page-main {
+  padding: 2rem 9%;
+  background-color: #f9fafb;
+}
+
 .main-content-pesquisa {
   margin: 2rem 0;
-  padding: 0 9%;
 }
 
-.titulo-pesquisa {
-  display: flex;
-  gap: 0.75rem;
-  font-size: 1.5rem;
+.titulo-pesquisa h2 {
+  font-size: 1.8rem;
   font-weight: 700;
   color: var(--cor-primaria-fonte);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
 }
 
+/* Transforma a lista de produtos em uma grade responsiva */
 .lista-produtos-pesquisa {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;
   margin: 3rem 0;
+}
+
+/* Estilo para a mensagem de "Nenhum resultado" */
+.sem-resultados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--cor-secundaria-fonte);
+  min-height: 300px;
+}
+
+.sem-resultados i {
+  font-size: 3rem;
+  color: var(--cor-terciaria-fonte);
+  margin-bottom: 1.5rem;
+}
+
+.sem-resultados h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--cor-primaria-fonte);
+  margin-bottom: 0.5rem;
 }
