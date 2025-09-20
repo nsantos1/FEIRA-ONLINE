@@ -105,3 +105,8 @@
   color: var(--cor-primaria-fonte);
   margin-bottom: 0.5rem;
 }
+
+.favorite-button:hover{
+  color: black;
+  background-color: #55af00;
+}

@@ -20,7 +20,7 @@ export default function Pesquisa() {
       const fuse = new Fuse(todosProdutos, {
         keys: ["nome", "categoria"], // Onde ele deve procurar (nome e categoria do produto)
         includeScore: true,
-        threshold: 0.3, // Nível de "flexibilidade" (0 é exato, 1 é muito flexível)
+        threshold: 0.2, // Nível de "flexibilidade" (0 é exato, 1 é muito flexível)
         ignoreLocation: true,
       });
 
