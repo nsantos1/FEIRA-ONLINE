@@ -8,24 +8,26 @@ import CarrinhoDeCompras from "./pages/carrinhodecompras/carrinhodecompras.jsx";
 import Blog from "./pages/blog/blog.jsx";
 import Contato from "./pages/contato/contact.jsx";
 import Pesquisa from "./pages/pesquisa/pesquisa.jsx";
-import Produtos from "./pages/produtos/produtos.jsx"; 
+import Produtos from "./pages/produtos/produtos.jsx";
+
+import ProtectedRoute from "./components/protectedRoute/protectedRoute.jsx";
 
 const Rotas = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/sobre" element={<About />} />
-        <Route path="/logineregistro" element={<LoginERegistro />} />
-        <Route path="/favoritos" element={<ProdutosFavoritos />} />
-        <Route path="/carrinho" element={<CarrinhoDeCompras />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/contato" element={<Contato />} />
-        <Route path="/pesquisa" element={<Pesquisa />} />
-        <Route path="/produtos" element={<Produtos />} /> 
-      </Routes>
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/sobre" element={<About />} />
+                <Route path="/logineregistro" element={<LoginERegistro />} />
+                <Route path="/favoritos" element={<ProdutosFavoritos />} />
+                <Route path="/carrinho" element={<CarrinhoDeCompras />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/contato" element={<Contato />} />
+                <Route path="/pesquisa" element={<Pesquisa />} />
+                <Route path="/produtos" element={<Produtos />} />
+            </Routes>
+        </BrowserRouter>
+    );
 };
 
 export default Rotas;
