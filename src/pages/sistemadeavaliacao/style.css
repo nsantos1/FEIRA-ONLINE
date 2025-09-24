@@ -1,0 +1,415 @@
+/*
+================================================================================
+  # Variáveis e Tipografia
+================================================================================
+*/
+:root {
+  --cor-primaria: rgba(255, 250, 240);
+  --cor-secundaria: #ecebee;
+  --cor-barra-pesquisa: #6b7280;
+  --fonte-primaria: "Inter", sans-serif;
+  --fonte-secundaria: "Poppins", sans-serif;
+  --cor-primaria-fonte: #1a1a1a;
+  --cor-secundaria-fonte: #4b5563;
+  --cor-terciaria-fonte: #8d8d8d;
+  --cor-hover: #55af00;
+}
+
+body {
+  font-family: var(--fonte-primaria);
+  color: var(--cor-primaria-fonte);
+  background-color: var(--cor-secundaria);
+  margin: 0;
+  padding: 0;
+}
+
+/*
+================================================================================
+  # Layout Geral
+================================================================================
+*/
+.review-system-app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.review-system-main-content {
+  flex: 1;
+  padding: 2rem 1rem;
+}
+
+.review-system-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.review-system-divider {
+  border: none;
+  height: 1px;
+  background-color: var(--cor-secundaria);
+  margin: 2rem 0;
+}
+
+/*
+================================================================================
+  # Componentes de Avaliação (Resumo e Barras)
+================================================================================
+*/
+.review-system-summary {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .review-system-summary {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.review-system-general-rating {
+  background: var(--cor-primaria);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.review-system-score {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.5rem 0;
+  color: var(--cor-hover);
+}
+
+.review-system-rating-bars-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  background-color: var(--cor-primaria);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.review-system-rating-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9em;
+}
+
+.review-system-bar-label {
+  min-width: 80px;
+  font-weight: 500;
+  color: var(--cor-secundaria-fonte);
+}
+
+.review-system-bar-track {
+  flex: 1;
+  height: 10px;
+  background-color: var(--cor-secundaria);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.review-system-bar-fill {
+  height: 100%;
+  background: var(--cor-hover);
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.review-system-bar-value {
+  min-width: 40px;
+  text-align: right;
+  font-weight: 500;
+  color: var(--cor-terciaria-fonte);
+}
+
+.review-system-stars-container {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.review-system-star {
+  color: var(--cor-hover);
+  font-size: 1.5rem;
+}
+
+.review-system-empty-star {
+  color: var(--cor-terciaria-fonte);
+  font-size: 1.5rem;
+}
+
+/*
+================================================================================
+  # Formulário de Avaliação e Comentário
+================================================================================
+*/
+.review-system-star-selection {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.review-system-star-icon {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 2rem;
+  color: var(--cor-terciaria-fonte);
+}
+
+.review-system-star-icon.ativo {
+  color: var(--cor-hover);
+}
+
+.review-system-score-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--cor-primaria-fonte);
+  margin-left: 0.5rem;
+}
+
+.review-system-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: var(--cor-primaria);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.review-system-form h4 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.review-system-form-group {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.review-system-form-group input {
+  flex: 1;
+  padding: 1rem;
+  border: 1px solid var(--cor-secundaria);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: var(--fonte-primaria);
+}
+
+.review-system-comment-input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--cor-secundaria);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: var(--fonte-primaria);
+  resize: vertical;
+  min-height: 100px;
+  transition: all 0.3s ease;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-primaria-fonte);
+}
+
+.review-system-comment-input:focus {
+  outline: none;
+  border-color: var(--cor-hover);
+  box-shadow: 0 0 0 3px rgba(85, 175, 0, 0.2);
+}
+
+.review-system-submit-button {
+  padding: 1rem 2rem;
+  background: var(--cor-hover);
+  color: var(--cor-primaria);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
+}
+
+.review-system-submit-button:hover {
+  background: var(--cor-secundaria-fonte);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/*
+================================================================================
+  # Lista de Comentários e Detalhes
+================================================================================
+*/
+.review-system-comments-list-container {
+  margin-top: 2rem;
+}
+
+.review-system-comments-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.review-system-comment-item {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: var(--cor-primaria);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-system-comment-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.review-system-comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.review-system-user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.review-system-user-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--cor-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cor-primaria);
+  font-weight: 700;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.review-system-user-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-system-user-name {
+  font-weight: 600;
+  color: var(--cor-primaria-fonte);
+  font-size: 1.1rem;
+}
+
+.review-system-comment-date {
+  color: var(--cor-terciaria-fonte);
+  font-size: 0.85rem;
+}
+
+.review-system-comment-rating {
+  flex-shrink: 0;
+}
+
+.review-system-comment-content p {
+  margin: 0;
+  color: var(--cor-secundaria-fonte);
+}
+
+/* Estilos para botões de ação do comentário */
+.review-system-comment-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.review-system-comment-actions button {
+  background: none;
+  border: none;
+  color: var(--cor-secundaria-fonte);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+  padding: 0;
+}
+
+.review-system-comment-actions button:hover {
+  color: var(--cor-hover);
+}
+
+.review-system-comment-actions button svg {
+  font-size: 1rem;
+}
+
+.review-system-comments-filters {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.review-system-comments-filters select {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--cor-secundaria);
+  background-color: var(--cor-primaria);
+  color: var(--cor-primaria-fonte);
+}
+
+.review-system-edit-comment-input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--cor-secundaria);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: var(--fonte-primaria);
+  resize: vertical;
+  min-height: 100px;
+  transition: all 0.3s ease;
+  background-color: var(--cor-primaria);
+  color: var(--cor-primaria-fonte);
+}
+
+.review-system-edit-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.review-system-edit-actions button {
+  padding: 0.75rem 1.5rem;
+  background: var(--cor-hover);
+  color: var(--cor-primaria);
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.review-system-edit-actions button:hover {
+  background: var(--cor-secundaria-fonte);
+}

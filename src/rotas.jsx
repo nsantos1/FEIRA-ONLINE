@@ -8,7 +8,8 @@ import CarrinhoDeCompras from "./pages/carrinhodecompras/carrinhodecompras.jsx";
 import Blog from "./pages/blog/blog.jsx";
 import Contato from "./pages/contato/contact.jsx";
 import Pesquisa from "./pages/pesquisa/pesquisa.jsx";
-import Produtos from "./pages/produtos/produtos.jsx"; 
+import Produtos from "./pages/produtos/produtos.jsx";
+import SistemaDeAvaliacao from "./pages/sistemadeavaliacao/sistemadeavaliacao.jsx";
 
 const Rotas = () => {
   return (
@@ -22,7 +23,10 @@ const Rotas = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contato" element={<Contato />} />
         <Route path="/pesquisa" element={<Pesquisa />} />
-        <Route path="/produtos" element={<Produtos />} /> 
+        <Route path="/produtos" element={<Produtos />} />
+        
+        {}
+        <Route path="/avaliacoes/:id" element={<SistemaDeAvaliacao />} />
       </Routes>
     </BrowserRouter>
   );

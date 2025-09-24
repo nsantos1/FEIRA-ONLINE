@@ -120,3 +120,21 @@
   background-color: #f3f4f6;
   color: var(--cor-hover);
 }
+.view-reviews-button {
+  background-color: #4a9400; 
+  color: #ffffff; 
+  border: none; 
+  border-radius: 8px; 
+  padding: 10px 15px; 
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.view-reviews-button:hover {
+  background-color: #4a9400; 
+}

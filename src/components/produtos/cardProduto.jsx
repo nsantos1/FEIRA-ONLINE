@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./styles.css";
 
 export default function CardProduto({ produto }) {
@@ -17,6 +18,7 @@ export default function CardProduto({ produto }) {
           })}
         </p>
       </div>
+
       <div className="product-card-actions">
         <button className="add-to-cart-button">
           <i className="fa-solid fa-cart-shopping"></i>
@@ -25,6 +27,10 @@ export default function CardProduto({ produto }) {
         <button className="favorite-button">
           <i className="fa-regular fa-heart"></i>
         </button>
+        {}
+        <Link to={`/avaliacoes/${produto.id}`} className="view-reviews-button">
+          <span>Avaliações</span>
+        </Link>
       </div>
     </div>
   );

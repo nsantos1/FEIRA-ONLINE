@@ -6,6 +6,38 @@ const produtos = [
     preco: 9.9,
     imagem: "https://images.unsplash.com/photo-1587334206596-c0f9f7dccbe6?q=80&w=881&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     categoria: "Frutas e Verduras",
+    avaliacoes: [
+      {
+        id: 101,
+        nome: "Ana Beatriz",
+        nota: 5,
+        comentario: "Sabor incrível, bem madura e pronta para consumo.",
+        data: "20/08/2025",
+        likes: 12,
+        unlikes: 1,
+        reports: 0,
+      },
+      {
+        id: 102,
+        nome: "Thiago Lima",
+        nota: 4,
+        comentario: "Chegou um pouco verde, mas com alguns dias ficou perfeita.",
+        data: "21/08/2025",
+        likes: 5,
+        unlikes: 0,
+        reports: 0,
+      },
+      {
+        id: 103,
+        nome: "Larissa Costa",
+        nota: 5,
+        comentario: "Fresquinha, ótima para fazer vitaminas.",
+        data: "22/08/2025",
+        likes: 2,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 2,
@@ -13,6 +45,38 @@ const produtos = [
     preco: 11.9,
     imagem: "https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     categoria: "Frutas e Verduras",
+    avaliacoes: [
+      {
+        id: 201,
+        nome: "Carlos Martins",
+        nota: 5,
+        comentario: "Maçãs suculentas e com um aroma delicioso.",
+        data: "19/08/2025",
+        likes: 8,
+        unlikes: 0,
+        reports: 0,
+      },
+      {
+        id: 202,
+        nome: "Juliana Fonseca",
+        nota: 5,
+        comentario: "Sempre crocantes, perfeitas para lanches.",
+        data: "20/08/2025",
+        likes: 3,
+        unlikes: 0,
+        reports: 0,
+      },
+      {
+        id: 203,
+        nome: "Rafaela Mendes",
+        nota: 4,
+        comentario: "Boa qualidade, mas encontrei uma com um pequeno amassado.",
+        data: "23/08/2025",
+        likes: 0,
+        unlikes: 1,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 3,
@@ -20,6 +84,28 @@ const produtos = [
     preco: 4.5,
     imagem: "https://cdn.pixabay.com/photo/2016/08/03/01/09/carrot-1565597_1280.jpg",
     categoria: "Frutas e Verduras",
+    avaliacoes: [
+      {
+        id: 301,
+        nome: "Lucas Pereira",
+        nota: 4,
+        comentario: "Fresca, ideal para sopas e refogados.",
+        data: "15/08/2025",
+        likes: 3,
+        unlikes: 0,
+        reports: 0,
+      },
+      {
+        id: 302,
+        nome: "Patrícia Gomes",
+        nota: 5,
+        comentario: "A cor e a textura são ótimas, sinal de um produto de qualidade.",
+        data: "16/08/2025",
+        likes: 1,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 4,
@@ -27,6 +113,28 @@ const produtos = [
     preco: 7.8,
     imagem: "https://cdn.pixabay.com/photo/2016/10/26/20/08/vegetables-1772527_1280.jpg",
     categoria: "Frutas e Verduras",
+    avaliacoes: [
+      {
+        id: 401,
+        nome: "Gustavo Soares",
+        nota: 5,
+        comentario: "Excelente para molho de tomate, muito saboroso.",
+        data: "18/08/2025",
+        likes: 7,
+        unlikes: 0,
+        reports: 0,
+      },
+      {
+        id: 402,
+        nome: "Leticia Ferreira",
+        nota: 4,
+        comentario: "Chegaram um pouco amassados, mas no geral a qualidade é boa.",
+        data: "19/08/2025",
+        likes: 2,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 5,
@@ -34,6 +142,18 @@ const produtos = [
     preco: 3.5,
     imagem: "https://images.unsplash.com/photo-1515356956468-873dd257f911?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     categoria: "Frutas e Verduras",
+    avaliacoes: [
+      {
+        id: 501,
+        nome: "Fernando Costa",
+        nota: 5,
+        comentario: "Folhas crocantes e super frescas. Adorei a qualidade.",
+        data: "17/08/2025",
+        likes: 9,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 6,
@@ -41,6 +161,18 @@ const produtos = [
     preco: 5.2,
     imagem: "https://cdn.pixabay.com/photo/2016/08/11/08/37/potatoes-1585057_1280.jpg",
     categoria: "Frutas e Verduras",
+    avaliacoes: [
+      {
+        id: 601,
+        nome: "Julia Vieira",
+        nota: 4,
+        comentario: "Batatas de bom tamanho, perfeitas para purê.",
+        data: "14/08/2025",
+        likes: 4,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 51,
@@ -48,6 +180,18 @@ const produtos = [
     preco: 4.2,
     imagem: "https://images.unsplash.com/photo-1615734333404-69f44d04d26f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     categoria: "Frutas e Verduras",
+    avaliacoes: [
+      {
+        id: 511,
+        nome: "Ricardo Campos",
+        nota: 5,
+        comentario: "Muito suculentos, ideais para limonada.",
+        data: "21/08/2025",
+        likes: 6,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 52,
@@ -55,8 +199,19 @@ const produtos = [
     preco: 5.5,
     imagem: "https://images.unsplash.com/photo-1601039641847-7857b994d704?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     categoria: "Frutas e Verduras",
+    avaliacoes: [
+      {
+        id: 521,
+        nome: "Silvana Santos",
+        nota: 4,
+        comentario: "No ponto certo de maturação, bom para fazer guacamole.",
+        data: "22/08/2025",
+        likes: 4,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
-
   // --- Bebê e Gravidez ---
   {
     id: 7,
@@ -64,6 +219,18 @@ const produtos = [
     preco: 8.9,
     imagem: "https://images.unsplash.com/photo-1600984177310-c86c8f8fa9c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGFwaW5oYSUyMGRlJTIwYmViZXxlbnwwfHwwfHx8MA%3D%3D",
     categoria: "Bebê e Gravidez",
+    avaliacoes: [
+      {
+        id: 701,
+        nome: "Amanda Faria",
+        nota: 5,
+        comentario: "Minha filha amou! Sabor natural e sem aditivos.",
+        data: "23/08/2025",
+        likes: 10,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 8,
@@ -71,6 +238,18 @@ const produtos = [
     preco: 35.5,
     imagem: "https://images.unsplash.com/photo-1695065876947-0e899ca10336?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZyYWxkYXxlbnwwfHwwfHx8MA%3D%3D",
     categoria: "Bebê e Gravidez",
+    avaliacoes: [
+      {
+        id: 801,
+        nome: "Marcelo Dantas",
+        nota: 4,
+        comentario: "Produto macio e com boa capacidade de absorção.",
+        data: "20/08/2025",
+        likes: 2,
+        unlikes: 1,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 9,
@@ -78,6 +257,18 @@ const produtos = [
     preco: 12.0,
     imagem: "https://images.unsplash.com/photo-1633265484557-e298493cb162?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGVuJUMzJUE3byUyMHVtZWRlY2lkb3xlbnwwfHwwfHx8MA%3D%3D",
     categoria: "Bebê e Gravidez",
+    avaliacoes: [
+      {
+        id: 901,
+        nome: "Carolina Ribeiro",
+        nota: 5,
+        comentario: "Não causa alergia, excelente para pele sensível.",
+        data: "21/08/2025",
+        likes: 5,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 53,
@@ -85,8 +276,19 @@ const produtos = [
     preco: 25.0,
     imagem: "https://plus.unsplash.com/premium_photo-1674949802338-f94005eb5b0a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y3JlbWV8ZW58MHx8MHx8fDA%3D",
     categoria: "Bebê e Gravidez",
+    avaliacoes: [
+      {
+        id: 531,
+        nome: "Bruno Dias",
+        nota: 5,
+        comentario: "Elimina as assaduras em pouco tempo, muito eficiente.",
+        data: "22/08/2025",
+        likes: 8,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
-
   // --- Bebidas ---
   {
     id: 10,
@@ -94,6 +296,18 @@ const produtos = [
     preco: 12.5,
     imagem: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     categoria: "Bebidas",
+    avaliacoes: [
+      {
+        id: 1001,
+        nome: "Gabriela Vasconcelos",
+        nota: 5,
+        comentario: "Sabor de fruta de verdade, sem conservantes. Muito bom!",
+        data: "20/08/2025",
+        likes: 15,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 11,
@@ -101,6 +315,18 @@ const produtos = [
     preco: 6.8,
     imagem: "https://images.unsplash.com/flagged/photo-1560505761-b46fb3d231bf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8JUMzJUExZ3VhJTIwZGUlMjBjb2NvfGVufDB8fDB8fHww",
     categoria: "Bebidas",
+    avaliacoes: [
+      {
+        id: 1101,
+        nome: "Diego Castro",
+        nota: 4,
+        comentario: "Refrescante, mas a embalagem poderia ser mais fácil de abrir.",
+        data: "19/08/2025",
+        likes: 3,
+        unlikes: 2,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 54,
@@ -108,8 +334,19 @@ const produtos = [
     preco: 15.9,
     imagem: "https://images.unsplash.com/photo-1716142840686-4c796b60ca35?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8a29tYnVjaGElMjBkZSUyMGdlbmdpYnJlfGVufDB8fDB8fHww",
     categoria: "Bebidas",
+    avaliacoes: [
+      {
+        id: 541,
+        nome: "Fernanda Lemos",
+        nota: 5,
+        comentario: "Adoro o toque picante do gengibre. Perfeita para dar um up no dia.",
+        data: "21/08/2025",
+        likes: 6,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
-
   // --- Carnes e Frutos do Mar ---
   {
     id: 13,
@@ -117,6 +354,28 @@ const produtos = [
     preco: 45.0,
     imagem: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     categoria: "Carnes e Frutos do Mar",
+    avaliacoes: [
+      {
+        id: 1301,
+        nome: "Rafael Gomes",
+        nota: 5,
+        comentario: "Qualidade de restaurante, macio e sem espinhas. Recomendo muito!",
+        data: "22/08/2025",
+        likes: 11,
+        unlikes: 0,
+        reports: 0,
+      },
+      {
+        id: 1302,
+        nome: "Mariana Almeida",
+        nota: 4,
+        comentario: "A embalagem veio um pouco aberta, mas o produto estava intacto.",
+        data: "23/08/2025",
+        likes: 4,
+        unlikes: 1,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 14,
@@ -124,6 +383,18 @@ const produtos = [
     preco: 28.9,
     imagem: "https://plus.unsplash.com/premium_photo-1670357599582-de7232e949a0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2FybmUlMjBtbyVDMyVBRGRhfGVufDB8fDB8fHww",
     categoria: "Carnes e Frutos do Mar",
+    avaliacoes: [
+      {
+        id: 1401,
+        nome: "Vanessa Santos",
+        nota: 5,
+        comentario: "Carne fresca e com pouca gordura, perfeita para recheios.",
+        data: "18/08/2025",
+        likes: 6,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 55,
@@ -131,8 +402,19 @@ const produtos = [
     preco: 18.0,
     imagem: "https://plus.unsplash.com/premium_photo-1676686125407-227f3d352df8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b3Zvc3xlbnwwfHwwfHx8MA%3D%3D",
     categoria: "Carnes e Frutos do Mar",
+    avaliacoes: [
+      {
+        id: 551,
+        nome: "Pedro Souza",
+        nota: 5,
+        comentario: "Ovos de excelente qualidade, gema de cor vibrante.",
+        data: "20/08/2025",
+        likes: 9,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
-
   // --- Biscoitos e Snacks ---
   {
     id: 56,
@@ -140,6 +422,18 @@ const produtos = [
     preco: 9.5,
     imagem: "https://plus.unsplash.com/premium_photo-1726072375899-434c539ac731?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmlzY29pdG8lMjBkZSUyMGFycm96fGVufDB8fDB8fHww",
     categoria: "Biscoitos e Snacks",
+    avaliacoes: [
+      {
+        id: 561,
+        nome: "Isabela Cardoso",
+        nota: 4,
+        comentario: "Sabor suave e crocância na medida. Bom para um lanche leve.",
+        data: "21/08/2025",
+        likes: 2,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 57,
@@ -147,8 +441,19 @@ const produtos = [
     preco: 7.2,
     imagem: "https://images.unsplash.com/photo-1740993384870-0793845268e6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2hpcHMlMjBkZSUyMG1hbmRpb2NhfGVufDB8fDB8fHww",
     categoria: "Biscoitos e Snacks",
+    avaliacoes: [
+      {
+        id: 571,
+        nome: "André Oliveira",
+        nota: 5,
+        comentario: "Extremamente crocante e com um sabor autêntico de mandioca.",
+        data: "22/08/2025",
+        likes: 7,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
-  
   // --- Pães e Padaria ---
   {
     id: 18,
@@ -156,6 +461,18 @@ const produtos = [
     preco: 1.2,
     imagem: "https://plus.unsplash.com/premium_photo-1664640733898-d5c3f71f44e1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cCVDMyVBM298ZW58MHx8MHx8fDA%3D",
     categoria: "Pães e Padaria",
+    avaliacoes: [
+      {
+        id: 1801,
+        nome: "Fabio Dutra",
+        nota: 5,
+        comentario: "Crosta crocante e miolo macio. Perfeito para o café da manhã.",
+        data: "23/08/2025",
+        likes: 10,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 19,
@@ -163,6 +480,18 @@ const produtos = [
     preco: 8.5,
     imagem: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     categoria: "Pães e Padaria",
+    avaliacoes: [
+      {
+        id: 1901,
+        nome: "Maria Guedes",
+        nota: 5,
+        comentario: "Sabor intenso de chocolate e textura muito macia.",
+        data: "20/08/2025",
+        likes: 8,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 58,
@@ -170,8 +499,19 @@ const produtos = [
     preco: 12.0,
     imagem: "https://images.unsplash.com/photo-1593285702005-ccc93dfe7cfb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cCVDMyVBM28lMjBkZSUyMGZvcm1hJTIwaW50ZWdyYWx8ZW58MHx8MHx8fDA%3D",
     categoria: "Pães e Padaria",
+    avaliacoes: [
+      {
+        id: 581,
+        nome: "Guilherme Santos",
+        nota: 4,
+        comentario: "Fatias finas e perfeitas para torradas.",
+        data: "21/08/2025",
+        likes: 3,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
-
   // --- Café da Manhã e Laticínios ---
   {
     id: 20,
@@ -179,13 +519,37 @@ const produtos = [
     preco: 55.0,
     imagem: "https://images.unsplash.com/photo-1733210437933-6151fbe2818e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHF1ZWlqbyUyMG1pbmFzJTIwZnJlc2NhbHxlbnwwfHwwfHx8MA%3D%3D",
     categoria: "Café da Manhã e Laticínios",
+    avaliacoes: [
+      {
+        id: 2001,
+        nome: "Roberto Lins",
+        nota: 5,
+        comentario: "Muito fresco e com pouca gordura. Excelente para dietas.",
+        data: "19/08/2025",
+        likes: 9,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 21,
     nome: "Leite Integral (1L)",
     preco: 5.99,
-    imagem: "https://images.unsplash.com/photo-1559598467-f8b76c8155d0?q=80&w=1887&auto=format&fit=crop&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imagem: "https://images.unsplash.com/photo-1559598467-f8b76c8155d0?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     categoria: "Café da Manhã e Laticínios",
+    avaliacoes: [
+      {
+        id: 2101,
+        nome: "Paula Vieira",
+        nota: 5,
+        comentario: "Saboroso e rico, o leite perfeito para o café.",
+        data: "20/08/2025",
+        likes: 4,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 59,
@@ -193,6 +557,18 @@ const produtos = [
     preco: 11.5,
     imagem: "https://plus.unsplash.com/premium_photo-1700440539073-c769891a9e3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWFudGVpZ2F8ZW58MHx8MHx8fDA%3D",
     categoria: "Café da Manhã e Laticínios",
+    avaliacoes: [
+      {
+        id: 591,
+        nome: "Bianca Dias",
+        nota: 5,
+        comentario: "Derrete fácil no pão, e o sabor é maravilhoso.",
+        data: "23/08/2025",
+        likes: 6,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 60,
@@ -200,8 +576,19 @@ const produtos = [
     preco: 4.8,
     imagem: "https://plus.unsplash.com/premium_photo-1713719213311-044ae870a7ec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGlvZ3VydGV8ZW58MHx8MHx8fDA%3D",
     categoria: "Café da Manhã e Laticínios",
+    avaliacoes: [
+      {
+        id: 601,
+        nome: "Flavio Santos",
+        nota: 4,
+        comentario: "Textura cremosa e sabor suave. Combina com tudo.",
+        data: "21/08/2025",
+        likes: 3,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
-
   // --- Congelados ---
   {
     id: 61,
@@ -209,6 +596,18 @@ const produtos = [
     preco: 15.0,
     imagem: "https://cdn.pixabay.com/photo/2018/12/08/01/11/cheese-bread-3862706_640.jpg",
     categoria: "Congelados",
+    avaliacoes: [
+      {
+        id: 611,
+        nome: "Gustavo Mendes",
+        nota: 5,
+        comentario: "Fácil de preparar e com muito queijo. Uma delícia!",
+        data: "22/08/2025",
+        likes: 10,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 62,
@@ -216,8 +615,19 @@ const produtos = [
     preco: 28.9,
     imagem: "https://plus.unsplash.com/premium_photo-1671559021023-3da68c12aeed?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bGFzYW5oYXxlbnwwfHwwfHx8MA%3D%3D",
     categoria: "Congelados",
+    avaliacoes: [
+      {
+        id: 621,
+        nome: "Eliane Costa",
+        nota: 4,
+        comentario: "Rápido para aquecer e o molho é bem temperado.",
+        data: "23/08/2025",
+        likes: 7,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
-  
   // --- Mercearia e Básicos ---
   {
     id: 22,
@@ -225,6 +635,18 @@ const produtos = [
     preco: 8.0,
     imagem: "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXJyb3p8ZW58MHx8MHx8fDA%3D",
     categoria: "Mercearia e Básicos",
+    avaliacoes: [
+      {
+        id: 2201,
+        nome: "Beatriz Oliveira",
+        nota: 5,
+        comentario: "Cozinha muito bem e não empapa. Excelente para o dia a dia.",
+        data: "18/08/2025",
+        likes: 12,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 23,
@@ -232,6 +654,18 @@ const produtos = [
     preco: 9.5,
     imagem: "https://plus.unsplash.com/premium_photo-1726072397905-f398308c564e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmVpaiVDMyVBM28lMjBjYXJpb2NhfGVufDB8fDB8fHww",
     categoria: "Mercearia e Básicos",
+    avaliacoes: [
+      {
+        id: 2301,
+        nome: "Tiago Alves",
+        nota: 4,
+        comentario: "Tem um bom caldo, mas precisei escolher alguns grãos.",
+        data: "19/08/2025",
+        likes: 5,
+        unlikes: 1,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 63,
@@ -239,8 +673,19 @@ const produtos = [
     preco: 39.9,
     imagem: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXplaXRlfGVufDB8fDB8fHww",
     categoria: "Mercearia e Básicos",
+    avaliacoes: [
+      {
+        id: 631,
+        nome: "João Barbosa",
+        nota: 5,
+        comentario: "Sabor marcante e de alta qualidade. Perfeito para finalização de pratos.",
+        data: "21/08/2025",
+        likes: 14,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
-  
   // --- Saúde ---
   {
     id: 64,
@@ -248,6 +693,18 @@ const produtos = [
     preco: 22.0,
     imagem: "https://plus.unsplash.com/premium_photo-1723507365758-be432e8460ce?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVsJTIwb3JnYW5pY298ZW58MHx8MHx8fDA%3D",
     categoria: "Saúde",
+    avaliacoes: [
+      {
+        id: 641,
+        nome: "Cintia Alves",
+        nota: 5,
+        comentario: "Sabor doce e natural, ideal para adoçar receitas e bebidas.",
+        data: "22/08/2025",
+        likes: 5,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 65,
@@ -255,8 +712,19 @@ const produtos = [
     preco: 5.5,
     imagem: "https://plus.unsplash.com/premium_photo-1677776518705-70b21cbc4d47?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2Fib25ldGV8ZW58MHx8MHx8fDA%3D",
     categoria: "Saúde",
+    avaliacoes: [
+      {
+        id: 651,
+        nome: "Monica Duarte",
+        nota: 4,
+        comentario: "Limpa profundamente e tem uma fragrância agradável.",
+        data: "23/08/2025",
+        likes: 2,
+        unlikes: 1,
+        reports: 0,
+      },
+    ],
   },
-
   // --- Produtos para o Lar ---
   {
     id: 66,
@@ -264,6 +732,18 @@ const produtos = [
     preco: 4.0,
     imagem: "https://cdn.pixabay.com/photo/2017/06/10/12/08/cosmetics-2389772_640.jpg",
     categoria: "Produtos para o Lar",
+    avaliacoes: [
+      {
+        id: 661,
+        nome: "Arthur Pires",
+        nota: 5,
+        comentario: "Remove bem a gordura e tem um bom rendimento.",
+        data: "20/08/2025",
+        likes: 8,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
   },
   {
     id: 67,
@@ -271,7 +751,19 @@ const produtos = [
     preco: 7.5,
     imagem: "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGV0ZXJnZW50ZXxlbnwwfHwwfHx8MA%3D%3D",
     categoria: "Produtos para o Lar",
-  }
+    avaliacoes: [
+      {
+        id: 671,
+        nome: "Bruna Alves",
+        nota: 5,
+        comentario: "Limpa sem deixar resíduos. O cheiro é suave e refrescante.",
+        data: "21/08/2025",
+        likes: 6,
+        unlikes: 0,
+        reports: 0,
+      },
+    ],
+  },
 ];
 
 export default produtos;
