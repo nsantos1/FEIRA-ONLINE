@@ -117,13 +117,13 @@ const ListaComentarios = React.memo(({
   <div className="review-system-comments-list-container">
     {/* Modal de confirmação de exclusão */}
     {confirmacaoExclusao && (
-      <div className="review-system-modal-backdrop">
-        <div className="review-system-modal-content">
+      <div className="modal-confirmacao">
+        <div className="modal-confirmacao-conteudo">
           <h4>Confirmar Exclusão</h4>
           <p>Tem certeza que deseja excluir este comentário?</p>
-          <div className="review-system-modal-actions">
-            <button onClick={onConfirmarExclusao} className="confirm-delete-button">Excluir</button>
-            <button onClick={onCancelarExclusao} className="cancel-button">Cancelar</button>
+          <div className="modal-confirmacao-botoes">
+            <button onClick={onConfirmarExclusao} className="excluir">Excluir</button>
+            <button onClick={onCancelarExclusao} className="cancelar">Cancelar</button>
           </div>
         </div>
       </div>
@@ -172,21 +172,38 @@ const ListaComentarios = React.memo(({
               )}
             </div>
             <div className="review-system-comment-actions">
-              <button onClick={() => onCurtir(c.id)}>
+              <button
+                onClick={() => onCurtir(c.id, usuario.id)}
+                disabled={usuario && c.curtidasPor?.includes(usuario.id)}
+                className="review-system-like-button"
+              >
                 <FaThumbsUp /> {c.likes}
               </button>
-              <button onClick={() => onDescurtir(c.id)}>
+              <button
+                onClick={() => onDescurtir(c.id, usuario.id)}
+                disabled={usuario && c.descurtidasPor?.includes(usuario.id)}
+                className="review-system-dislike-button"
+              >
                 <FaThumbsDown /> {c.unlikes}
               </button>
-              <button onClick={() => onDenunciar(c.id)}>
+              <button
+                onClick={() => onDenunciar(c.id)}
+                className="review-system-report-button"
+              >
                 <FaFlag /> Denunciar
               </button>
               {usuario?.nome === c.nome && (
                 <>
-                  <button onClick={() => onEditar(c.id)}>
+                  <button
+                    onClick={() => onEditar(c.id)}
+                    className="review-system-edit-button"
+                  >
                     <FaEdit /> Editar
                   </button>
-                  <button onClick={() => onExcluir(c.id)}>
+                  <button
+                    onClick={() => onExcluir(c.id)}
+                    className="review-system-delete-button"
+                  >
                     <FaTrash /> Excluir
                   </button>
                 </>
@@ -222,6 +239,8 @@ const FormularioAvaliacao = React.memo(({ usuario, onAdicionar }) => {
       likes: 0,
       unlikes: 0,
       reports: 0,
+      curtidasPor: [],
+      descurtidasPor: [],
     });
 
     setNota(0);
@@ -353,21 +372,65 @@ const SistemaDeAvaliacao = () => {
     [setAvaliacoes]
   );
   const curtir = useCallback(
-    (avaliacaoId) =>
+    (avaliacaoId, usuarioId) => {
+      if (!usuarioId) return;
       setAvaliacoes((prev) =>
-        prev.map((a) =>
-          a.id === avaliacaoId ? { ...a, likes: a.likes + 1 } : a
-        )
-      ),
+        prev.map((a) => {
+          if (a.id === avaliacaoId) {
+            const jaCurtiu = a.curtidasPor?.includes(usuarioId);
+            const jaDescurtiu = a.descurtidasPor?.includes(usuarioId);
+            
+            if (jaCurtiu) {
+              return a; // Já curtiu, não faz nada
+            }
+
+            const novasDescurtidas = jaDescurtiu 
+              ? a.descurtidasPor.filter(id => id !== usuarioId) 
+              : a.descurtidasPor;
+
+            return {
+              ...a,
+              likes: a.likes + 1,
+              unlikes: jaDescurtiu ? a.unlikes - 1 : a.unlikes,
+              curtidasPor: [...(a.curtidasPor || []), usuarioId],
+              descurtidasPor: novasDescurtidas,
+            };
+          }
+          return a;
+        })
+      );
+    },
     [setAvaliacoes]
   );
   const descurtir = useCallback(
-    (avaliacaoId) =>
-      setAvaliacoes((prev) =>
-        prev.map((a) =>
-          a.id === avaliacaoId ? { ...a, unlikes: a.unlikes + 1 } : a
-        )
-      ),
+    (avaliacaoId, usuarioId) => {
+        if (!usuarioId) return;
+        setAvaliacoes((prev) =>
+          prev.map((a) => {
+            if (a.id === avaliacaoId) {
+              const jaDescurtiu = a.descurtidasPor?.includes(usuarioId);
+              const jaCurtiu = a.curtidasPor?.includes(usuarioId);
+
+              if (jaDescurtiu) {
+                  return a; // Já descurtiu, não faz nada
+              }
+
+              const novasCurtidas = jaCurtiu 
+                ? a.curtidasPor.filter(id => id !== usuarioId) 
+                : a.curtidasPor;
+
+              return {
+                ...a,
+                likes: jaCurtiu ? a.likes - 1 : a.likes,
+                unlikes: a.unlikes + 1,
+                descurtidasPor: [...(a.descurtidasPor || []), usuarioId],
+                curtidasPor: novasCurtidas,
+              };
+            }
+            return a;
+          })
+        );
+      },
     [setAvaliacoes]
   );
   const denunciar = useCallback(
@@ -453,6 +516,10 @@ const SistemaDeAvaliacao = () => {
       <main className="review-system-main-content">
         <div className="review-system-container">
           <h1 className="review-system-product-title">{produtoAtual?.nome || "Produto"}</h1>
+          {/* Nova linha para exibir o vendedor */}
+          <p className="review-system-product-seller">
+            Vendido e entregue por: <strong>{produtoAtual?.loja}</strong>
+          </p>
           <p className="review-system-product-subtitle">
             Deixe sua opinião sobre nosso produto e veja o que outros clientes
             acharam.

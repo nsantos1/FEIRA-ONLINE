@@ -73,16 +73,16 @@ body {
 }
 
 .review-system-product-title {
-    font-size: clamp(1.8rem, 5vw, 2.5rem);
-    font-weight: 700;
-    color: var(--cor-primaria-fonte);
-    font-family: var(--fonte-secundaria);
-    margin-bottom: 0.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  font-weight: 700;
+  color: var(--cor-primaria-fonte);
+  font-family: var(--fonte-secundaria);
+  margin-bottom: 0.5rem;
 }
 
 .review-system-product-subtitle {
-    color: var(--cor-secundaria-fonte);
-    font-size: 1.1rem;
+  color: var(--cor-secundaria-fonte);
+  font-size: 1.1rem;
 }
 
 .container-aplicacao {
@@ -149,9 +149,9 @@ body {
 }
 
 .review-system-general-rating h2 {
-    color: var(--cor-hover);
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
+  color: var(--cor-hover);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .review-system-general-rating .review-system-score {
@@ -163,8 +163,8 @@ body {
 }
 
 .review-system-general-rating p {
-    color: var(--cor-primaria-fonte);
-    font-size: 0.9rem;
+  color: var(--cor-primaria-fonte);
+  font-size: 0.9rem;
 }
 
 .review-system-general-rating .review-system-stars-container {
@@ -490,4 +490,139 @@ body {
 
 .review-system-edit-actions button:hover {
   background: var(--cor-secundaria-fonte);
+}
+
+/*
+================================================================================
+  # Estilização Específica dos Botões de Ação
+================================================================================
+*/
+
+/* Estilo geral para todos os botões de ação */
+.review-system-comment-actions button {
+  background: none;
+  border: none;
+  color: var(--cor-secundaria-fonte); /* Cor padrão dos ícones */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+  font-weight: 600;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.review-system-comment-actions button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Botão Curtir */
+.review-system-like-button {
+  color: var(--cor-hover);
+}
+
+/* Botão Descurtir */
+.review-system-dislike-button {
+  color: var(--cor-secundaria-fonte);
+}
+
+/* Botão Denunciar */
+.review-system-report-button {
+  color: var(--cor-terciaria-fonte);
+}
+
+/* Botão Editar */
+.review-system-edit-button {
+  color: var(--cor-terciaria-fonte);
+}
+
+/* Botão Excluir */
+.review-system-delete-button {
+  color: var(--cor-secundaria-fonte);
+}
+
+.review-system-comment-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/*
+================================================================================
+  # Modal de Confirmação de Exclusão
+================================================================================
+*/
+.modal-confirmacao {
+  /* Fundo semitransparente que escurece a tela */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal-confirmacao-conteudo {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+}
+
+.modal-confirmacao-conteudo h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cor-primaria-fonte);
+  margin-bottom: 1rem;
+}
+
+.modal-confirmacao-conteudo p {
+  font-size: 1rem;
+  color: var(--cor-secundaria-fonte);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.modal-confirmacao-botoes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.modal-confirmacao-botoes button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-confirmacao-botoes button.cancelar {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-secundaria-fonte);
+}
+
+.modal-confirmacao-botoes button.cancelar:hover {
+  background-color: #e0e0e0;
+}
+
+.modal-confirmacao-botoes button.excluir {
+  background-color: #ef4444; /* Vermelho para indicar ação destrutiva */
+  color: #ffffff;
+}
+
+.modal-confirmacao-botoes button.excluir:hover {
+  background-color: #dc2626;
 }

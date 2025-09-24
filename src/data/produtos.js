@@ -413,7 +413,7 @@ const produtos = [
     id: 14,
     nome: "Patinho Moído (500g)",
     preco: 28.9,
-    imagem: "https://plus.unsplash.com/premium_photo-1670357599582-de7232e949a0?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2FybmUlMjBtbyVDMyVBRGRhfGVufDB8fDB8fHww",
+    imagem: "https://plus.unsplash.com/premium_photo-1670357599582-de7232e949a0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2FybmUlMjBtbyVDMyVBRGRhfGVufDB8fDB8fHww",
     categoria: "Carnes e Frutos do Mar",
     avaliacoes: [
       {
@@ -500,7 +500,7 @@ const produtos = [
     id: 18,
     nome: "Pão Francês (Unidade)",
     preco: 1.2,
-    imagem: "https://plus.unsplash.com/premium_photo-1664640733898-d5c3f71f44e1?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cCVDMyVBM298ZW58MHx8MHx8fDA%3D",
+    imagem: "https://plus.unsplash.com/premium_photo-1664640733898-d5c3f71f44e1?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cCVDMyVBM28lMjBmcmFuY2VzfGVufDB8fDB8fHww",
     categoria: "Pães e Padaria",
     avaliacoes: [
       {
@@ -564,7 +564,7 @@ const produtos = [
     id: 20,
     nome: "Queijo Minas Frescal (Kg)",
     preco: 55.0,
-    imagem: "https://images.unsplash.com/photo-1733210437933-6151fbe2818e?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHF1ZWlqbyUyMG1pbmFzJTIwZnJlc2NhbHxlbnwwfHwwfHx8MA%3D%3D",
+    imagem: "https://images.unsplash.com/photo-1733210437933-6151fbe2818e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHF1ZWlqbyUyMG1pbmFzJTIwZnJlc2NhbHxlbnwwfHwwfHx8MA%3D%3D",
     categoria: "Café da Manhã e Laticínios",
     avaliacoes: [
       {
@@ -606,7 +606,7 @@ const produtos = [
     id: 59,
     nome: "Manteiga com Sal (200g)",
     preco: 11.5,
-    imagem: "https://plus.unsplash.com/premium_photo-1700440539073-c769891a9e3f?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWFudGVpZ2F8ZW58MHx8MHx8fDA%3D",
+    imagem: "https://plus.unsplash.com/premium_photo-1700440539073-c769891a9e3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWFudGVpZ2F8ZW58MHx8MHx8fDA%3D",
     categoria: "Café da Manhã e Laticínios",
     avaliacoes: [
       {
@@ -627,7 +627,7 @@ const produtos = [
     id: 60,
     nome: "Iogurte Natural (170g)",
     preco: 4.8,
-    imagem: "https://plus.unsplash.com/premium_photo-1713719213311-044ae870a7ec?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGlvZ3VydGV8ZW58MHx8MHx8fDA%3D",
+    imagem: "https://plus.unsplash.com/premium_photo-1713719213311-044ae870a7ec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGlvZ3VydGV8ZW58MHx8MHx8fDA%3D",
     categoria: "Café da Manhã e Laticínios",
     avaliacoes: [
       {
@@ -670,7 +670,7 @@ const produtos = [
     id: 62,
     nome: "Lasanha Bolonhesa Congelada (600g)",
     preco: 28.9,
-    imagem: "https://plus.unsplash.com/premium_photo-1671559021023-3da68c12aeed?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bGFzYW5oYXxlbnwwfHwwfHx8MA%3D%3D",
+    imagem: "https://plus.unsplash.com/premium_photo-1671559021023-3da68c12aeed?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bGFzYW5oYXxlbnwwfHwwfHx8MA%3D%3D",
     categoria: "Congelados",
     avaliacoes: [
       {
@@ -693,7 +693,7 @@ const produtos = [
     id: 22,
     nome: "Arroz Agulhinha (1Kg)",
     preco: 8.0,
-    imagem: "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXJyb3p8ZW58MHx8MHx8fDA%3D",
+    imagem: "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXJyb3p8ZW58MHx8MHx8fDA%3D",
     categoria: "Mercearia e Básicos",
     avaliacoes: [
       {
@@ -714,7 +714,7 @@ const produtos = [
     id: 23,
     nome: "Feijão Carioca (1Kg)",
     preco: 9.5,
-    imagem: "https://plus.unsplash.com/premium_photo-1726072397905-f398308c564e?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmVpaiVDMyVBM28lMjBjYXJpb2NhfGVufDB8fDB8fHww",
+    imagem: "https://plus.unsplash.com/premium_photo-1726072397905-f398308c564e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmVpaiVDMyVBM28lMjBjYXJpb2NhfGVufDB8fDB8fHww",
     categoria: "Mercearia e Básicos",
     avaliacoes: [
       {
@@ -735,7 +735,7 @@ const produtos = [
     id: 63,
     nome: "Azeite Extra Virgem (500ml)",
     preco: 39.9,
-    imagem: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXplaXRlfGVufDB8fDB8fHww",
+    imagem: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXplaXRlfGVufDB8fDB8fHww",
     categoria: "Mercearia e Básicos",
     avaliacoes: [
       {
@@ -758,7 +758,7 @@ const produtos = [
     id: 64,
     nome: "Mel Orgânico (250g)",
     preco: 22.0,
-    imagem: "https://plus.unsplash.com/premium_photo-1723507365758-be432e8460ce?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVsJTIwb3JnYW5pY298ZW58MHx8MHx8fDA%3D",
+    imagem: "https://plus.unsplash.com/premium_photo-1723507365758-be432e8460ce?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVsJTIwb3JnYW5pY298ZW58MHx8MHx8fDA%3D",
     categoria: "Saúde",
     avaliacoes: [
       {
@@ -779,7 +779,7 @@ const produtos = [
     id: 65,
     nome: "Sabonete Antisséptico",
     preco: 5.5,
-    imagem: "https://plus.unsplash.com/premium_photo-1677776518705-70b21cbc4d47?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2Fib25ldGV8ZW58MHx8MHx8fDA%3D",
+    imagem: "https://plus.unsplash.com/premium_photo-1677776518705-70b21cbc4d47?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2Fib25ldGV8ZW58MHx8MHx8fDA%3D",
     categoria: "Saúde",
     avaliacoes: [
       {
@@ -822,7 +822,7 @@ const produtos = [
     id: 67,
     nome: "Limpador Multiuso (500ml)",
     preco: 7.5,
-    imagem: "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGV0ZXJnZW50ZXxlbnwwfHwwfHx8MA%3D%3D",
+    imagem: "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGV0ZXJnZW50ZXxlbnwwfHwwfHx8MA%3D%3D",
     categoria: "Produtos para o Lar",
     avaliacoes: [
       {
