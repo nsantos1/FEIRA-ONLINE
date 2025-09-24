@@ -18,14 +18,15 @@
 body {
   font-family: var(--fonte-primaria);
   color: var(--cor-primaria-fonte);
-  background-color: var(--cor-secundaria);
+  background-color: #ffffff;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
 /*
 ================================================================================
-  # Layout Geral
+  # Layout Geral e Componentes Base
 ================================================================================
 */
 .review-system-app-wrapper {
@@ -36,7 +37,6 @@ body {
 
 .cabecalho {
   background-color: var(--cor-primaria);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   padding: 1rem 2rem;
 }
 
@@ -72,11 +72,23 @@ body {
   margin: 0 auto;
 }
 
+.review-system-product-title {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-weight: 700;
+    color: var(--cor-primaria-fonte);
+    font-family: var(--fonte-secundaria);
+    margin-bottom: 0.5rem;
+}
+
+.review-system-product-subtitle {
+    color: var(--cor-secundaria-fonte);
+    font-size: 1.1rem;
+}
+
 .container-aplicacao {
   background-color: var(--cor-primaria);
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .review-system-divider {
@@ -93,7 +105,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: var(--cor-primaria);
+  background: #ffffff;
   padding: 0 1rem;
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -113,10 +125,10 @@ body {
   grid-template-columns: 1fr;
   gap: 1.5rem;
   margin-top: 1.5rem;
-  background-color: var(--cor-primaria);
+  background-color: var(--cor-hover);
+  color: #ffffff;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 @media (min-width: 768px) {
@@ -126,7 +138,7 @@ body {
 }
 
 .review-system-general-rating {
-  background: var(--cor-primaria);
+  background-color: #ffffff;
   padding: 2rem;
   border-radius: 12px;
   text-align: center;
@@ -134,14 +146,28 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.review-system-score {
-  font-size: 4rem;
+.review-system-general-rating h2 {
+    color: var(--cor-hover);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.review-system-general-rating .review-system-score {
+  font-size: clamp(3rem, 8vw, 4rem);
   font-weight: 700;
   line-height: 1;
   margin: 0.5rem 0;
+  color: var(--cor-hover);
+}
+
+.review-system-general-rating p {
+    color: var(--cor-primaria-fonte);
+    font-size: 0.9rem;
+}
+
+.review-system-general-rating .review-system-stars-container {
   color: var(--cor-hover);
 }
 
@@ -158,25 +184,26 @@ body {
   align-items: center;
   gap: 0.75rem;
   font-size: 0.9em;
+  color: #ffffff;
 }
 
 .review-system-bar-label {
   min-width: 80px;
   font-weight: 500;
-  color: var(--cor-secundaria-fonte);
+  color: #ffffff;
 }
 
 .review-system-bar-track {
   flex: 1;
   height: 10px;
-  background-color: var(--cor-secundaria);
+  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 999px;
   overflow: hidden;
 }
 
 .review-system-bar-fill {
   height: 100%;
-  background: var(--cor-hover);
+  background: #ffffff;
   border-radius: 999px;
   transition: width 0.4s ease;
 }
@@ -185,7 +212,7 @@ body {
   min-width: 40px;
   text-align: right;
   font-weight: 500;
-  color: var(--cor-terciaria-fonte);
+  color: #ffffff;
 }
 
 .review-system-stars-container {
@@ -195,15 +222,14 @@ body {
 }
 
 .review-system-star {
-  color: var(--cor-hover);
+  color: #ffffff;
   font-size: 1.5rem;
 }
 
 .review-system-empty-star {
-  color: var(--cor-terciaria-fonte);
+  color: rgba(255, 255, 255, 0.4);
   font-size: 1.5rem;
 }
-
 /*
 ================================================================================
   # Formulário de Avaliação e Comentário
@@ -218,7 +244,7 @@ body {
 .review-system-star-icon {
   cursor: pointer;
   transition: all 0.2s ease;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 5vw, 2rem);
   color: var(--cor-terciaria-fonte);
 }
 
@@ -229,7 +255,7 @@ body {
 .review-system-score-text {
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--cor-primaria-fonte);
+  color: var(--cor-hover);
   margin-left: 0.5rem;
 }
 
@@ -237,6 +263,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .review-system-form-group {
@@ -251,44 +278,49 @@ body {
   font-size: 1rem;
 }
 
-.review-system-comment-input {
+.review-system-name-input,
+.review-system-comment-input,
+.review-system-edit-comment-input {
   width: 100%;
   padding: 1rem;
-  border: 1px solid var(--cor-secundaria);
+  border: 1.5px solid var(--cor-secundaria);
   border-radius: 8px;
   font-size: 1rem;
   font-family: var(--fonte-primaria);
   resize: vertical;
-  min-height: 100px;
   transition: all 0.3s ease;
-  background-color: var(--cor-primaria);
+  background-color: #ffffff;
   color: var(--cor-primaria-fonte);
 }
 
-.review-system-comment-input:focus {
+.review-system-comment-input,
+.review-system-edit-comment-input {
+  min-height: 100px;
+}
+
+.review-system-name-input:focus,
+.review-system-comment-input:focus,
+.review-system-edit-comment-input:focus {
   outline: none;
   border-color: var(--cor-hover);
-  box-shadow: 0 0 0 3px rgba(85, 175, 0, 0.2);
 }
 
 .review-system-submit-button {
   padding: 1rem 2rem;
   background: var(--cor-hover);
-  color: var(--cor-primaria);
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  align-self: flex-start;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  align-self: center;
   letter-spacing: 0.5px;
 }
 
 .review-system-submit-button:hover {
   background: var(--cor-secundaria-fonte);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /*
@@ -311,14 +343,13 @@ body {
 .review-system-comment-item {
   padding: 1.5rem;
   border-radius: 12px;
-  background: var(--cor-primaria);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* CORREÇÃO: Fundo do card de comentários agora é verde */
+  background: var(--cor-hover);
+  transition: transform 0.3s ease;
 }
 
 .review-system-comment-item:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .review-system-comment-header {
@@ -339,11 +370,13 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--cor-hover);
+  /* CORREÇÃO: Fundo do avatar agora é branco */
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--cor-primaria);
+  /* CORREÇÃO: Cor do texto no avatar agora é verde */
+  color: var(--cor-hover);
   font-weight: 700;
   font-size: 1.25rem;
   flex-shrink: 0;
@@ -356,25 +389,29 @@ body {
 
 .review-system-user-name {
   font-weight: 600;
-  color: var(--cor-primaria-fonte);
+  /* CORREÇÃO: Cor do nome do usuário agora é branco */
+  color: #ffffff;
   font-size: 1.1rem;
 }
 
 .review-system-comment-date {
-  color: var(--cor-terciaria-fonte);
+  /* CORREÇÃO: Cor da data agora é branco */
+  color: rgba(255, 255, 255, 0.8);
   font-size: 0.85rem;
 }
 
 .review-system-comment-rating {
   flex-shrink: 0;
+  /* CORREÇÃO: Cor das estrelas agora é branca */
+  color: #ffffff;
 }
 
 .review-system-comment-content p {
   margin: 0;
-  color: var(--cor-secundaria-fonte);
+  /* CORREÇÃO: Cor do conteúdo do comentário agora é branco */
+  color: #ffffff;
 }
 
-/* Estilos para botões de ação do comentário */
 .review-system-comment-actions {
   display: flex;
   gap: 1rem;
@@ -384,7 +421,8 @@ body {
 .review-system-comment-actions button {
   background: none;
   border: none;
-  color: var(--cor-secundaria-fonte);
+  /* CORREÇÃO: Cor dos botões de ação agora é branco */
+  color: #ffffff;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -394,7 +432,8 @@ body {
 }
 
 .review-system-comment-actions button:hover {
-  color: var(--cor-hover);
+  /* CORREÇÃO: Cor do hover dos botões de ação */
+  color: var(--cor-secundaria-fonte);
 }
 
 .review-system-comment-actions button svg {
@@ -403,6 +442,7 @@ body {
 
 .review-system-comments-filters {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem;
   margin-bottom: 1.5rem;
@@ -413,21 +453,21 @@ body {
   padding: 0.5rem;
   border-radius: 8px;
   border: 1px solid var(--cor-secundaria);
-  background-color: var(--cor-primaria);
+  background-color: #ffffff;
   color: var(--cor-primaria-fonte);
 }
 
 .review-system-edit-comment-input {
   width: 100%;
   padding: 1rem;
-  border: 1px solid var(--cor-secundaria);
+  border: 1.5px solid var(--cor-secundaria);
   border-radius: 8px;
   font-size: 1rem;
   font-family: var(--fonte-primaria);
   resize: vertical;
   min-height: 100px;
   transition: all 0.3s ease;
-  background-color: var(--cor-primaria);
+  background-color: #ffffff;
   color: var(--cor-primaria-fonte);
 }
 
@@ -440,7 +480,7 @@ body {
 .review-system-edit-actions button {
   padding: 0.75rem 1.5rem;
   background: var(--cor-hover);
-  color: var(--cor-primaria);
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   font-weight: 700;

@@ -110,8 +110,25 @@ const ListaComentarios = React.memo(({
   onComentarioEditadoChange,
   onSalvarEdicao,
   onCancelarEdicao,
+  confirmacaoExclusao,
+  onConfirmarExclusao,
+  onCancelarExclusao,
 }) => (
   <div className="review-system-comments-list-container">
+    {/* Modal de confirmação de exclusão */}
+    {confirmacaoExclusao && (
+      <div className="review-system-modal-backdrop">
+        <div className="review-system-modal-content">
+          <h4>Confirmar Exclusão</h4>
+          <p>Tem certeza que deseja excluir este comentário?</p>
+          <div className="review-system-modal-actions">
+            <button onClick={onConfirmarExclusao} className="confirm-delete-button">Excluir</button>
+            <button onClick={onCancelarExclusao} className="cancel-button">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    )}
+
     {comentarios.length === 0 ? (
       <p>Ainda não há comentários para este produto.</p>
     ) : (
@@ -186,10 +203,14 @@ const ListaComentarios = React.memo(({
 const FormularioAvaliacao = React.memo(({ usuario, onAdicionar }) => {
   const [nota, setNota] = useState(0);
   const [comentario, setComentario] = useState("");
+  const [erro, setErro] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!nota || !comentario.trim()) return;
+    if (!nota || !comentario.trim()) {
+      setErro("Por favor, selecione uma nota e escreva um comentário.");
+      return;
+    }
 
     onAdicionar({
       id: crypto.randomUUID(),
@@ -205,6 +226,7 @@ const FormularioAvaliacao = React.memo(({ usuario, onAdicionar }) => {
 
     setNota(0);
     setComentario("");
+    setErro("");
   };
 
   return (
@@ -229,6 +251,7 @@ const FormularioAvaliacao = React.memo(({ usuario, onAdicionar }) => {
         className="review-system-comment-input"
         rows="4"
       />
+      {erro && <p className="review-system-error-message">{erro}</p>}
       <button type="submit" className="review-system-submit-button">
         Enviar Avaliação
       </button>
@@ -239,12 +262,17 @@ const FormularioAvaliacao = React.memo(({ usuario, onAdicionar }) => {
 // Componente CadastroUsuario
 const CadastroUsuario = React.memo(({ onCadastrar }) => {
   const [nome, setNome] = useState("");
+  const [erro, setErro] = useState("");
 
   const handleSubmit = useCallback((e) => {
     e.preventDefault();
-    if (!nome.trim()) return;
+    if (!nome.trim()) {
+      setErro("O campo nome não pode estar vazio.");
+      return;
+    }
     onCadastrar({ nome, id: crypto.randomUUID() });
     setNome("");
+    setErro("");
   }, [nome, onCadastrar]);
 
   return (
@@ -256,11 +284,13 @@ const CadastroUsuario = React.memo(({ onCadastrar }) => {
           placeholder="Digite seu nome"
           value={nome}
           onChange={(e) => setNome(e.target.value)}
+          className="review-system-name-input"
         />
         <button type="submit" className="review-system-submit-button">
           Entrar
         </button>
       </div>
+      {erro && <p className="review-system-error-message">{erro}</p>}
     </form>
   );
 });
@@ -274,14 +304,14 @@ const SistemaDeAvaliacao = () => {
   );
 
   const [usuario, setUsuario] = useState(null);
-  const [avaliacoes, setAvaliacoes] = useLocalStorage(`avaliacoes-${id}`, []);
-  const [ordem, setOrdem] = useState("recentes");
 
-  useEffect(() => {
-    if (produtoAtual && produtoAtual.avaliacoes && avaliacoes.length === 0) {
-      setAvaliacoes(produtoAtual.avaliacoes);
-    }
-  }, [produtoAtual, avaliacoes, setAvaliacoes]);
+  // Adicione esta linha para obter o valor inicial das avaliações do produto
+  const avaliacoesIniciais = useMemo(() => produtoAtual?.avaliacoes || [], [produtoAtual]);
+
+  // Modifique esta linha para passar avaliacoesIniciais como valor padrão
+  const [avaliacoes, setAvaliacoes] = useLocalStorage(`avaliacoes-${id}`, avaliacoesIniciais);
+
+  // Remova o useEffect antigo, pois ele não é mais necessário
 
   const media = useMemo(
     () =>
@@ -291,8 +321,17 @@ const SistemaDeAvaliacao = () => {
     [avaliacoes]
   );
 
+  const [ordem, setOrdem] = useState("recentes");
+  const [filtroEstrelas, setFiltroEstrelas] = useState(0);
+
+  // Novo estado para o modal de exclusão
+  const [confirmacaoExclusao, setConfirmacaoExclusao] = useState(null);
+
   const avaliacoesOrdenadas = useMemo(() => {
-    const sorted = [...avaliacoes].sort((a, b) => {
+    // Adição do filtro de estrelas na lista de avaliações
+    const filtradas = avaliacoes.filter(a => filtroEstrelas === 0 || a.nota === filtroEstrelas);
+
+    const sorted = [...filtradas].sort((a, b) => {
       if (ordem === "recentes") {
         const dataA = a.data.split('/').reverse().join('-');
         const dataB = b.data.split('/').reverse().join('-');
@@ -307,7 +346,7 @@ const SistemaDeAvaliacao = () => {
       return 0;
     });
     return sorted;
-  }, [avaliacoes, ordem]);
+  }, [avaliacoes, ordem, filtroEstrelas]);
 
   const adicionarAvaliacao = useCallback(
     (nova) => setAvaliacoes((prev) => [nova, ...prev]),
@@ -340,11 +379,23 @@ const SistemaDeAvaliacao = () => {
       ),
     [setAvaliacoes]
   );
-  const excluir = useCallback(
-    (avaliacaoId) =>
-      setAvaliacoes((prev) => prev.filter((a) => a.id !== avaliacaoId)),
-    [setAvaliacoes]
-  );
+
+  // Função que abre o modal de confirmação
+  const iniciarExclusao = useCallback((avaliacaoId) => {
+    setConfirmacaoExclusao(avaliacaoId);
+  }, []);
+
+  // Função para confirmar a exclusão
+  const confirmarExclusao = useCallback(() => {
+    setAvaliacoes((prev) => prev.filter((a) => a.id !== confirmacaoExclusao));
+    setConfirmacaoExclusao(null);
+  }, [confirmacaoExclusao, setAvaliacoes]);
+
+  // Função para cancelar a exclusão
+  const cancelarExclusao = useCallback(() => {
+    setConfirmacaoExclusao(null);
+  }, []);
+
   const cadastrarUsuario = useCallback((novoUsuario) => setUsuario(novoUsuario), [setUsuario]);
   const logout = useCallback(() => setUsuario(null), [setUsuario]);
 
@@ -401,12 +452,12 @@ const SistemaDeAvaliacao = () => {
       <Header usuario={usuario} logout={logout} />
       <main className="review-system-main-content">
         <div className="review-system-container">
-          <h1>{produtoAtual?.nome || "Produto"}</h1>
-          <p>
+          <h1 className="review-system-product-title">{produtoAtual?.nome || "Produto"}</h1>
+          <p className="review-system-product-subtitle">
             Deixe sua opinião sobre nosso produto e veja o que outros clientes
             acharam.
           </p>
-          <div className="review-system-divider"></div>
+          <div className="review-system-divider" data-texto="Resumo das Avaliações"></div>
           <div className="review-system-summary">
             <div className="review-system-general-rating">
               <h2>Avaliação Geral</h2>
@@ -417,7 +468,7 @@ const SistemaDeAvaliacao = () => {
             <BarrasAvaliacao avaliacoes={avaliacoes} />
           </div>
 
-          <div className="review-system-divider"></div>
+          <div className="review-system-divider" data-texto="Sua Avaliação"></div>
           {!usuario ? (
             <CadastroUsuario onCadastrar={cadastrarUsuario} />
           ) : (
@@ -427,8 +478,20 @@ const SistemaDeAvaliacao = () => {
             />
           )}
 
-          <div className="review-system-divider"></div>
+          <div className="review-system-divider" data-texto="Comentários dos Clientes"></div>
           <div className="review-system-comments-filters">
+            <label>Filtrar por Nota: </label>
+            <select
+              value={filtroEstrelas}
+              onChange={(e) => setFiltroEstrelas(parseInt(e.target.value))}
+            >
+              <option value={0}>Todas as notas</option>
+              <option value={5}>5 estrelas</option>
+              <option value={4}>4 estrelas</option>
+              <option value={3}>3 estrelas</option>
+              <option value={2}>2 estrelas</option>
+              <option value={1}>1 estrela</option>
+            </select>
             <label>Ordenar por: </label>
             <select
               value={ordem}
@@ -446,13 +509,16 @@ const SistemaDeAvaliacao = () => {
             onDescurtir={descurtir}
             onDenunciar={denunciar}
             onEditar={iniciarEdicao}
-            onExcluir={excluir}
+            onExcluir={iniciarExclusao}
             usuario={usuario}
             editandoId={editandoId}
             comentarioEditado={comentarioEditado}
             onComentarioEditadoChange={setComentarioEditado}
             onSalvarEdicao={salvarEdicao}
             onCancelarEdicao={cancelarEdicao}
+            confirmacaoExclusao={confirmacaoExclusao}
+            onConfirmarExclusao={confirmarExclusao}
+            onCancelarExclusao={cancelarExclusao}
           />
         </div>
       </main>
