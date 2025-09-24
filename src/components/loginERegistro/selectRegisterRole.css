@@ -1,0 +1,46 @@
+.select-register-role {
+    position: relative;
+    width: 120px;
+}
+
+.select-register-role-selected {
+    cursor: pointer;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+}
+
+.select-register-role-selected:hover {
+    outline: none;
+    border-color: var(--cor-hover);
+    box-shadow: 0 0 0 3px rgba(85, 175, 0, 0.2);
+}
+
+.select-register-role-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background-color: #fff;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.select-register-role-option {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.select-register-role-option:hover {
+    background-color: var(--cor-secundaria);
+}

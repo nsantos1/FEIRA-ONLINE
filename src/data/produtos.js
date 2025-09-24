@@ -4,7 +4,7 @@ const produtos = [
     id: 1,
     nome: "Banana Prata (Kg)",
     preco: 9.9,
-    imagem: "https://images.unsplash.com/photo-1587334206596-c0f9f7dccbe6?q=80&w=881&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imagem: "https://images.unsplash.com/photo-1587334206596-c0f9f7dccbe6?q=80&w=881&auto=format&fit=crop&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     categoria: "Frutas e Verduras",
     avaliacoes: [
       {
@@ -38,12 +38,14 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Sítio Manancial",
+    descricao: "Cuidadosamente cultivada no Sítio Manancial, nossa banana prata é colhida no ponto ideal de maturação, garantindo um sabor doce e equilibrado com uma textura firme. É uma fonte natural de potássio e energia, perfeita para começar o dia, para um lanche rápido e nutritivo ou como ingrediente principal em bolos, vitaminas e sobremesas. Vendida por quilo para se adaptar à necessidade da sua família.",
   },
   {
     id: 2,
     nome: "Maçã Gala (Kg)",
     preco: 11.9,
-    imagem: "https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imagem: "https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?q=80&w=1740&auto=format&fit=crop&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     categoria: "Frutas e Verduras",
     avaliacoes: [
       {
@@ -77,6 +79,8 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Pomar do Vale",
+    descricao: "Diretamente do Pomar do Vale, a maçã gala é conhecida por sua casca vermelha vibrante, polpa crocante e um sabor adocicado com um leve toque de acidez. É a escolha ideal para um lanche saudável e prático, para compor saladas de frutas ou para criar sobremesas clássicas como tortas e compotas. Rica em fibras e antioxidantes, é um item essencial para uma dieta equilibrada.",
   },
   {
     id: 3,
@@ -106,6 +110,8 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Horta Fresca",
+    descricao: "Nossas cenouras são cultivadas na Horta Fresca com métodos orgânicos que garantem um produto livre de agrotóxicos, com uma cor intensa e um sabor adocicado inconfundível. Fonte de betacaroteno e vitamina A, são essenciais para a saúde da visão e da pele. Extremamente versáteis, podem ser consumidas cruas em saladas, cozidas em sopas e purês ou como ingrediente principal em deliciosos bolos.",
   },
   {
     id: 4,
@@ -135,12 +141,14 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Sítio Manancial",
+    descricao: "O tomate italiano do Sítio Manancial é a escolha perfeita para quem busca sabor e consistência. Com sua polpa carnuda e poucas sementes, é o ingrediente ideal para o preparo de molhos encorpados e saborosos, mas também brilha em saladas, bruschettas e assados. Colhido maduro, ele carrega o autêntico sabor do campo para a sua mesa.",
   },
   {
     id: 5,
     nome: "Alface Crespa (Unidade)",
     preco: 3.5,
-    imagem: "https://images.unsplash.com/photo-1515356956468-873dd257f911?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imagem: "https://images.unsplash.com/photo-1515356956468-873dd257f911?q=80&w=1074&auto=format&fit=crop&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     categoria: "Frutas e Verduras",
     avaliacoes: [
       {
@@ -154,6 +162,8 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Horta Fresca",
+    descricao: "Com folhas frescas, tenras e crocantes, nossa alface crespa é cultivada sem agrotóxicos na Horta Fresca. É a base perfeita para uma salada leve e refrescante, adicionando textura a sanduíches e wraps. Por ser vendida em unidade, você recebe um pé de alface inteiro, garantindo frescor por mais tempo na sua geladeira.",
   },
   {
     id: 6,
@@ -173,12 +183,14 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Fazenda Terra Boa",
+    descricao: "Proveniente da Fazenda Terra Boa, nossa batata inglesa é um dos alimentos mais versáteis da cozinha. Selecionada por sua qualidade e textura, é perfeita para cozinhar, assar, fritar ou preparar purês cremosos. É um ingrediente fundamental para inúmeras receitas, desde acompanhamentos simples até pratos principais sofisticados.",
   },
   {
     id: 51,
     nome: "Limão Tahiti (Kg)",
     preco: 4.2,
-    imagem: "https://images.unsplash.com/photo-1615734333404-69f44d04d26f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imagem: "https://images.unsplash.com/photo-1615734333404-69f44d04d26f?q=80&w=870&auto=format&fit=crop&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     categoria: "Frutas e Verduras",
     avaliacoes: [
       {
@@ -192,12 +204,14 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Pomar do Vale",
+    descricao: "O limão Tahiti do Pomar do Vale é conhecido por sua casca fina, ausência de sementes e, principalmente, por seu suco abundante e ácido na medida certa. Indispensável na cozinha, ele realça o sabor de carnes, peixes e saladas, além de ser a estrela de sucos, mousses e da tradicional caipirinha brasileira.",
   },
   {
     id: 52,
     nome: "Abacate (Unidade)",
     preco: 5.5,
-    imagem: "https://images.unsplash.com/photo-1601039641847-7857b994d704?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imagem: "https://images.unsplash.com/photo-1601039641847-7857b994d704?q=80&w=2070&auto=format&fit=crop&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     categoria: "Frutas e Verduras",
     avaliacoes: [
       {
@@ -211,6 +225,8 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Sítio Manancial",
+    descricao: "Este abacate do Sítio Manancial possui polpa cremosa e amanteigada, com um sabor suave que o torna incrivelmente versátil. Rico em gorduras saudáveis, vitaminas e minerais, é perfeito para preparar guacamoles, vitaminas nutritivas, saladas ou simplesmente para ser consumido com uma pitada de sal e azeite. Um superalimento para sua dieta.",
   },
   // --- Bebê e Gravidez ---
   {
@@ -231,12 +247,14 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Cantinho do Bebê",
+    descricao: "Pensando na introdução alimentar do seu bebê, esta papinha é feita com 100% de maçãs orgânicas, amassadas até atingir uma textura suave e de fácil deglutição. É um alimento puro, livre de açúcares, conservantes e aditivos químicos, oferecendo apenas o sabor natural e os nutrientes da fruta para o desenvolvimento saudável do seu pequeno.",
   },
   {
     id: 8,
     nome: "Fralda Descartável (Pacote M)",
     preco: 35.5,
-    imagem: "https://images.unsplash.com/photo-1695065876947-0e899ca10336?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZyYWxkYXxlbnwwfHwwfHx8MA%3D%3D",
+    imagem: "https://images.unsplash.com/photo-1695065876947-0e899ca10336?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZyYWxkYXxlbnwwfHwwfHx8MA%3D%3D",
     categoria: "Bebê e Gravidez",
     avaliacoes: [
       {
@@ -250,12 +268,14 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Meu Neném",
+    descricao: "Garanta noites tranquilas e dias confortáveis para o seu bebê com este pacote de fraldas tamanho M. Desenvolvidas com tecnologia de alta absorção, canais de ar respiráveis e barreiras duplas antivazamento, elas mantêm a pele do bebê seca e protegida por mais tempo, prevenindo irritações.",
   },
   {
     id: 9,
     nome: "Lenços Umedecidos (48 Unidades)",
     preco: 12.0,
-    imagem: "https://images.unsplash.com/photo-1633265484557-e298493cb162?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGVuJUMzJUE3byUyMHVtZWRlY2lkb3xlbnwwfHwwfHx8MA%3D%3D",
+    imagem: "https://images.unsplash.com/photo-1633265484557-e298493cb162?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGVuJUMzJUE3byUyMHVtZWRlY2lkb3xlbnwwfHwwfHx8MA%3D%3D",
     categoria: "Bebê e Gravidez",
     avaliacoes: [
       {
@@ -269,12 +289,14 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Cantinho do Bebê",
+    descricao: "Essenciais para a rotina de higiene, estes lenços umedecidos são formulados com ingredientes suaves e extratos naturais para limpar delicadamente a pele sensível do bebê. São hipoalergênicos, dermatologicamente testados e livres de álcool e parabenos, ideais para uso a cada troca de fralda ou para limpar mãozinhas e rosto.",
   },
   {
     id: 53,
     nome: "Creme para Assaduras (45g)",
     preco: 25.0,
-    imagem: "https://plus.unsplash.com/premium_photo-1674949802338-f94005eb5b0a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y3JlbWV8ZW58MHx8MHx8fDA%3D",
+    imagem: "https://plus.unsplash.com/premium_photo-1674949802338-f94005eb5b0a?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y3JlbWV8ZW58MHx8MHx8fDA%3D",
     categoria: "Bebê e Gravidez",
     avaliacoes: [
       {
@@ -288,13 +310,15 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Meu Neném",
+    descricao: "Proteja a pele delicada do seu bebê com este creme preventivo de assaduras. Sua fórmula exclusiva cria uma barreira protetora transparente, enriquecida com vitaminas A e D, que hidrata, nutre e ajuda na recuperação da pele, garantindo conforto e bem-estar ao seu filho a cada troca.",
   },
   // --- Bebidas ---
   {
     id: 10,
     nome: "Suco de Laranja Natural (1L)",
     preco: 12.5,
-    imagem: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imagem: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=1887&auto=format&fit=crop&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     categoria: "Bebidas",
     avaliacoes: [
       {
@@ -308,12 +332,14 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Pomar do Vale",
+    descricao: "Feito com laranjas frescas e selecionadas do Pomar do Vale, este suco é 100% natural, sem adição de água, açúcar ou conservantes. É a dose diária de vitamina C e energia que sua família precisa, com o sabor autêntico da fruta espremida na hora, pronto para ser servido.",
   },
   {
     id: 11,
     nome: "Água de Coco (330ml)",
     preco: 6.8,
-    imagem: "https://images.unsplash.com/flagged/photo-1560505761-b46fb3d231bf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8JUMzJUExZ3VhJTIwZGUlMjBjb2NvfGVufDB8fDB8fHww",
+    imagem: "https://images.unsplash.com/flagged/photo-1560505761-b46fb3d231bf?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8JUMzJUExZ3VhJTIwZGUlMjBjb2NvfGVufDB8fDB8fHww",
     categoria: "Bebidas",
     avaliacoes: [
       {
@@ -327,12 +353,14 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Coqueiro Verde",
+    descricao: "Capture a essência tropical com esta água de coco pura e natural, extraída de cocos verdes e frescos. É uma bebida isotônica natural, perfeita para repor os líquidos e sais minerais após atividades físicas ou simplesmente para se refrescar de forma saudável e saborosa em um dia quente.",
   },
   {
     id: 54,
     nome: "Kombucha de Gengibre (350ml)",
     preco: 15.9,
-    imagem: "https://images.unsplash.com/photo-1716142840686-4c796b60ca35?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8a29tYnVjaGElMjBkZSUyMGdlbmdpYnJlfGVufDB8fDB8fHww",
+    imagem: "https://images.unsplash.com/photo-1716142840686-4c796b60ca35?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8a29tYnVjaGElMjBkZSUyMGdlbmdpYnJlfGVufDB8fDB8fHww",
     categoria: "Bebidas",
     avaliacoes: [
       {
@@ -346,13 +374,15 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Viva Kombucha",
+    descricao: "Uma bebida viva, refrescante e cheia de personalidade. Nossa kombucha artesanal combina a base de chá verde fermentado com o toque picante e aromático do gengibre fresco. É uma bebida rica em probióticos, que auxiliam na saúde digestiva, e uma alternativa borbulhante e saudável aos refrigerantes tradicionais.",
   },
   // --- Carnes e Frutos do Mar ---
   {
     id: 13,
     nome: "Filé de Salmão (500g)",
     preco: 45.0,
-    imagem: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imagem: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=2070&auto=format&fit=crop&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     categoria: "Carnes e Frutos do Mar",
     avaliacoes: [
       {
@@ -376,12 +406,14 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Rei do Mar Pescados",
+    descricao: "Selecionado por especialistas, nosso filé de salmão é limpo, sem pele e sem espinhas, pronto para o preparo. Com sua carne tenra e sabor marcante, é rico em ômega 3, proteínas e vitaminas. O pacote de 500g é ideal para uma refeição especial, seja grelhado, assado no forno ou como base para um ceviche fresco.",
   },
   {
     id: 14,
     nome: "Patinho Moído (500g)",
     preco: 28.9,
-    imagem: "https://plus.unsplash.com/premium_photo-1670357599582-de7232e949a0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2FybmUlMjBtbyVDMyVBRGRhfGVufDB8fDB8fHww",
+    imagem: "https://plus.unsplash.com/premium_photo-1670357599582-de7232e949a0?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2FybmUlMjBtbyVDMyVBRGRhfGVufDB8fDB8fHww",
     categoria: "Carnes e Frutos do Mar",
     avaliacoes: [
       {
@@ -395,12 +427,14 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Açougue do Zé",
+    descricao: "Carne bovina de primeira qualidade, proveniente do corte patinho, que é conhecido por sua maciez e baixo teor de gordura. Moída na hora para garantir o máximo de frescor, é perfeita para preparar molhos à bolonhesa, recheios de tortas e pastéis, almôndegas suculentas ou hambúrgueres artesanais.",
   },
   {
     id: 55,
     nome: "Ovos Orgânicos (Dúzia)",
     preco: 18.0,
-    imagem: "https://plus.unsplash.com/premium_photo-1676686125407-227f3d352df8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b3Zvc3xlbnwwfHwwfHx8MA%3D%3D",
+    imagem: "https://plus.unsplash.com/premium_photo-1676686125407-227f3d352df8?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b3Zvc3xlbnwwfHwwfHx8fDA%3D%3D",
     categoria: "Carnes e Frutos do Mar",
     avaliacoes: [
       {
@@ -414,13 +448,15 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Galinheiro Feliz",
+    descricao: "Produzidos por galinhas criadas em liberdade, com alimentação 100% orgânica e vegetal, nossos ovos têm a gema mais vibrante e um sabor muito mais rico. São uma fonte de proteína de alta qualidade, ideais para o café da manhã, omeletes, bolos e as mais diversas receitas. Sinta a diferença que o bem-estar animal faz no seu prato.",
   },
   // --- Biscoitos e Snacks ---
   {
     id: 56,
     nome: "Biscoito de Arroz Integral (150g)",
     preco: 9.5,
-    imagem: "https://plus.unsplash.com/premium_photo-1726072375899-434c539ac731?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmlzY29pdG8lMjBkZSUyMGFycm96fGVufDB8fDB8fHww",
+    imagem: "https://plus.unsplash.com/premium_photo-1726072375899-434c539ac731?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmlzY29pdG8lMjBkZSUyMGFycm96fGVufDB8fDB8fHww",
     categoria: "Biscoitos e Snacks",
     avaliacoes: [
       {
@@ -434,12 +470,14 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Crocantes & Cia",
+    descricao: "Leve, crocante e incrivelmente versátil. Nosso biscoito de arroz integral é feito com apenas um ingrediente: arroz integral expandido. É o lanche perfeito para quem busca uma opção sem glúten, vegana e de baixa caloria. Ideal para ser consumido puro ou com patês, geleias e queijos.",
   },
   {
     id: 57,
     nome: "Chips de Mandioca (45g)",
     preco: 7.2,
-    imagem: "https://images.unsplash.com/photo-1740993384870-0793845268e6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2hpcHMlMjBkZSUyMG1hbmRpb2NhfGVufDB8fDB8fHww",
+    imagem: "https://images.unsplash.com/photo-1740993384870-0793845268e6?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2hpcHMlMjBkZSUyMG1hbmRpb2NhfGVufDB8fDB8fHww",
     categoria: "Biscoitos e Snacks",
     avaliacoes: [
       {
@@ -453,13 +491,16 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Raízes da Terra",
+    descricao: "Uma alternativa deliciosa e mais saudável aos salgadinhos convencionais. Nossos chips são feitos com finas fatias de mandioca fresca, fritas em óleo de palma e levemente salgadas com sal marinho. O resultado é um snack crocante, saboroso e com o gostinho autêntico do Brasil.",
   },
+
   // --- Pães e Padaria ---
   {
     id: 18,
     nome: "Pão Francês (Unidade)",
     preco: 1.2,
-    imagem: "https://plus.unsplash.com/premium_photo-1664640733898-d5c3f71f44e1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cCVDMyVBM298ZW58MHx8MHx8fDA%3D",
+    imagem: "https://plus.unsplash.com/premium_photo-1664640733898-d5c3f71f44e1?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cCVDMyVBM298ZW58MHx8MHx8fDA%3D",
     categoria: "Pães e Padaria",
     avaliacoes: [
       {
@@ -473,12 +514,14 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Padaria Pão Quente",
+    descricao: "O clássico pão francês, assado em forno a lenha para garantir uma casca dourada e crocante com um miolo incrivelmente macio e aerado. Chega sempre fresquinho, perfeito para o café da manhã com manteiga na chapa ou para preparar sanduíches saborosos a qualquer hora do dia.",
   },
   {
     id: 19,
     nome: "Bolo de Chocolate (Fatia)",
     preco: 8.5,
-    imagem: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imagem: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1987&auto=format&fit=crop&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     categoria: "Pães e Padaria",
     avaliacoes: [
       {
@@ -492,12 +535,14 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Doce Pedaço Confeitaria",
+    descricao: "Uma fatia generosa do nosso famoso bolo de chocolate, feito com cacau 50% e uma massa úmida e fofinha. A cobertura cremosa de brigadeiro artesanal finaliza essa sobremesa que é puro afeto. Perfeito para acompanhar um cafezinho ou para celebrar um momento especial.",
   },
   {
     id: 58,
     nome: "Pão de Forma Integral (500g)",
     preco: 12.0,
-    imagem: "https://images.unsplash.com/photo-1593285702005-ccc93dfe7cfb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cCVDMyVBM28lMjBkZSUyMGZvcm1hJTIwaW50ZWdyYWx8ZW58MHx8MHx8fDA%3D",
+    imagem: "https://images.unsplash.com/photo-1593285702005-ccc93dfe7cfb?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cCVDMyVBM28lMjBkZSUyMGZvcm1hJTIwaW50ZWdyYWx8ZW58MHx8MHx8fDA%3D",
     categoria: "Pães e Padaria",
     avaliacoes: [
       {
@@ -511,13 +556,15 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Padaria Pão Quente",
+    descricao: "Para quem busca uma opção mais saudável sem abrir mão do sabor, nosso pão de forma integral é a escolha certa. Feito com farinha 100% integral e um mix de grãos como linhaça e chia, ele é rico em fibras, macio e tem um sabor levemente adocicado. Ideal para sanduíches nutritivos e torradas.",
   },
   // --- Café da Manhã e Laticínios ---
   {
     id: 20,
     nome: "Queijo Minas Frescal (Kg)",
     preco: 55.0,
-    imagem: "https://images.unsplash.com/photo-1733210437933-6151fbe2818e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHF1ZWlqbyUyMG1pbmFzJTIwZnJlc2NhbHxlbnwwfHwwfHx8MA%3D%3D",
+    imagem: "https://images.unsplash.com/photo-1733210437933-6151fbe2818e?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHF1ZWlqbyUyMG1pbmFzJTIwZnJlc2NhbHxlbnwwfHwwfHx8MA%3D%3D",
     categoria: "Café da Manhã e Laticínios",
     avaliacoes: [
       {
@@ -531,6 +578,8 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Laticínios da Serra",
+    descricao: "Produzido artesanalmente nas montanhas, nosso Queijo Minas Frescal é feito com leite fresco e puro, resultando em uma textura leve, macia e um sabor suave e ligeiramente salgado. É um queijo muito versátil, perfeito para o café da manhã com pão, em saladas ou em receitas como o pão de queijo.",
   },
   {
     id: 21,
@@ -550,12 +599,14 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Fazenda Leiteira",
+    descricao: "Leite integral tipo A, direto da Fazenda Leiteira. É um leite fresco, pasteurizado e que não passa por processos de homogeneização, preservando sua cremosidade e sabor originais. Rico em cálcio e proteínas, é essencial para uma alimentação completa e nutritiva para toda a família.",
   },
   {
     id: 59,
     nome: "Manteiga com Sal (200g)",
     preco: 11.5,
-    imagem: "https://plus.unsplash.com/premium_photo-1700440539073-c769891a9e3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWFudGVpZ2F8ZW58MHx8MHx8fDA%3D",
+    imagem: "https://plus.unsplash.com/premium_photo-1700440539073-c769891a9e3f?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWFudGVpZ2F8ZW58MHx8MHx8fDA%3D",
     categoria: "Café da Manhã e Laticínios",
     avaliacoes: [
       {
@@ -569,12 +620,14 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Laticínios da Serra",
+    descricao: "Feita com creme de leite fresco batido lentamente, nossa manteiga com sal tem uma cremosidade e um sabor que só os produtos artesanais oferecem. O toque de sal realça seu sabor, tornando-a perfeita para passar no pão quentinho, finalizar pratos ou dar um toque especial em receitas de bolos e biscoitos.",
   },
   {
     id: 60,
     nome: "Iogurte Natural (170g)",
     preco: 4.8,
-    imagem: "https://plus.unsplash.com/premium_photo-1713719213311-044ae870a7ec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGlvZ3VydGV8ZW58MHx8MHx8fDA%3D",
+    imagem: "https://plus.unsplash.com/premium_photo-1713719213311-044ae870a7ec?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGlvZ3VydGV8ZW58MHx8MHx8fDA%3D",
     categoria: "Café da Manhã e Laticínios",
     avaliacoes: [
       {
@@ -588,6 +641,8 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Fazenda Leiteira",
+    descricao: "Nosso iogurte natural é feito com apenas dois ingredientes: leite fresco integral e fermentos lácteos. O resultado é um iogurte cremoso, de acidez equilibrada e sem adição de açúcares, conservantes ou espessantes. É uma excelente fonte de probióticos, ideal para ser consumido com frutas, mel, granola ou como base para molhos e sobremesas.",
   },
   // --- Congelados ---
   {
@@ -596,7 +651,7 @@ const produtos = [
     preco: 15.0,
     imagem: "https://cdn.pixabay.com/photo/2018/12/08/01/11/cheese-bread-3862706_640.jpg",
     categoria: "Congelados",
-    avaliacoes: [
+    avaliacoes:[
       {
         id: 611,
         nome: "Gustavo Mendes",
@@ -608,12 +663,14 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Delícias de Minas",
+    descricao: "Leve o autêntico sabor de Minas para sua casa. Nosso pão de queijo é feito com queijo canastra meia cura, polvilho de alta qualidade e ingredientes frescos. Já vem modelado, pronto para assar. Em poucos minutos, você terá um pão de queijo quentinho, com casca crocante e um interior macio e elástico. Perfeito para qualquer hora do dia.",
   },
   {
     id: 62,
     nome: "Lasanha Bolonhesa Congelada (600g)",
     preco: 28.9,
-    imagem: "https://plus.unsplash.com/premium_photo-1671559021023-3da68c12aeed?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bGFzYW5oYXxlbnwwfHwwfHx8MA%3D%3D",
+    imagem: "https://plus.unsplash.com/premium_photo-1671559021023-3da68c12aeed?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bGFzYW5oYXxlbnwwfHwwfHx8MA%3D%3D",
     categoria: "Congelados",
     avaliacoes: [
       {
@@ -627,13 +684,16 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Mamma Mia Massas",
+    descricao: "Uma refeição completa, prática e cheia de sabor para os dias corridos. Nossa lasanha é preparada com camadas de massa fresca artesanal, um rico e suculento molho à bolonhesa cozido lentamente, molho bechamel cremoso e queijo muçarela derretido. Basta levar ao forno para ter uma refeição que abraça a alma.",
   },
+
   // --- Mercearia e Básicos ---
   {
     id: 22,
     nome: "Arroz Agulhinha (1Kg)",
     preco: 8.0,
-    imagem: "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXJyb3p8ZW58MHx8MHx8fDA%3D",
+    imagem: "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXJyb3p8ZW58MHx8MHx8fDA%3D",
     categoria: "Mercearia e Básicos",
     avaliacoes: [
       {
@@ -647,12 +707,14 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Empório do Grão",
+    descricao: "O arroz agulhinha, ou tipo 1, é o pilar da culinária brasileira. Nossos grãos são rigorosamente selecionados para garantir um cozimento uniforme, resultando em um arroz sempre soltinho, branco e saboroso. É o acompanhamento perfeito para o feijão e para uma infinidade de pratos do dia a dia.",
   },
   {
     id: 23,
     nome: "Feijão Carioca (1Kg)",
     preco: 9.5,
-    imagem: "https://plus.unsplash.com/premium_photo-1726072397905-f398308c564e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmVpaiVDMyVBM28lMjBjYXJpb2NhfGVufDB8fDB8fHww",
+    imagem: "https://plus.unsplash.com/premium_photo-1726072397905-f398308c564e?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmVpaiVDMyVBM28lMjBjYXJpb2NhfGVufDB8fDB8fHww",
     categoria: "Mercearia e Básicos",
     avaliacoes: [
       {
@@ -666,12 +728,14 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Empório do Grão",
+    descricao: "Nosso feijão carioca é de safra nova, o que garante um cozimento mais rápido e um caldo excepcionalmente cremoso e encorpado. Com grãos macios e saborosos, é a base perfeita para a tradicional combinação com arroz, além de ser delicioso em sopas, saladas e na clássica feijoada.",
   },
   {
     id: 63,
     nome: "Azeite Extra Virgem (500ml)",
     preco: 39.9,
-    imagem: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXplaXRlfGVufDB8fDB8fHww",
+    imagem: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXplaXRlfGVufDB8fDB8fHww",
     categoria: "Mercearia e Básicos",
     avaliacoes: [
       {
@@ -685,13 +749,16 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Oliva Dourada",
+    descricao: "Um azeite de oliva extra virgem de alta qualidade, extraído a frio de azeitonas selecionadas para garantir baixa acidez e um sabor frutado com notas levemente picantes. É perfeito para regar saladas, finalizar pratos quentes, preparar molhos ou simplesmente para ser apreciado com um bom pão. Um toque de saúde e sabor mediterrâneo na sua cozinha.",
   },
+
   // --- Saúde ---
   {
     id: 64,
     nome: "Mel Orgânico (250g)",
     preco: 22.0,
-    imagem: "https://plus.unsplash.com/premium_photo-1723507365758-be432e8460ce?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVsJTIwb3JnYW5pY298ZW58MHx8MHx8fDA%3D",
+    imagem: "https://plus.unsplash.com/premium_photo-1723507365758-be432e8460ce?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVsJTIwb3JnYW5pY298ZW58MHx8MHx8fDA%3D",
     categoria: "Saúde",
     avaliacoes: [
       {
@@ -705,12 +772,14 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Apiário Doce Néctar",
+    descricao: "Este mel orgânico é produzido por abelhas que coletam néctar de flores silvestres em áreas de mata preservada, livre de pesticidas. É um alimento puro, não pasteurizado, que preserva todas as suas enzimas, vitaminas e propriedades terapêuticas. Use-o como adoçante natural para chás, frutas e iogurtes, ou para fortalecer sua imunidade.",
   },
   {
     id: 65,
     nome: "Sabonete Antisséptico",
     preco: 5.5,
-    imagem: "https://plus.unsplash.com/premium_photo-1677776518705-70b21cbc4d47?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2Fib25ldGV8ZW58MHx8MHx8fDA%3D",
+    imagem: "https://plus.unsplash.com/premium_photo-1677776518705-70b21cbc4d47?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2Fib25ldGV8ZW58MHx8MHx8fDA%3D",
     categoria: "Saúde",
     avaliacoes: [
       {
@@ -724,6 +793,8 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Bem Estar Natural",
+    descricao: "Cuide da saúde da sua pele com este sabonete antisséptico enriquecido com óleos essenciais de melaleuca e alecrim. Ele limpa profundamente, eliminando 99% das bactérias, ao mesmo tempo em que sua base vegetal hidrata e protege a pele, evitando o ressecamento. Ideal para a higiene diária das mãos e do corpo.",
   },
   // --- Produtos para o Lar ---
   {
@@ -744,12 +815,14 @@ const produtos = [
         reports: 0,
       },
     ],
+    loja: "Casa Limpa",
+    descricao: "Fórmula concentrada e de alto rendimento que remove gorduras e sujeiras com facilidade, deixando suas louças brilhando. Por ser neutro e dermatologicamente testado, não agride a pele das mãos. Sua composição biodegradável também cuida do meio ambiente, tornando a limpeza da sua cozinha mais consciente e eficiente.",
   },
   {
     id: 67,
     nome: "Limpador Multiuso (500ml)",
     preco: 7.5,
-    imagem: "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGV0ZXJnZW50ZXxlbnwwfHwwfHx8MA%3D%3D",
+    imagem: "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=500&auto=format&fit=crop&q=60&ixlib-rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGV0ZXJnZW50ZXxlbnwwfHwwfHx8MA%3D%3D",
     categoria: "Produtos para o Lar",
     avaliacoes: [
       {
@@ -763,7 +836,9 @@ const produtos = [
         reports: 0,
       },
     ],
-  },
+    loja: "Casa Limpa",
+    descricao: "O aliado perfeito para a limpeza diária de toda a casa. Sua fórmula inovadora remove manchas, poeira e gordura de pisos, azulejos, vidros e superfícies laváveis, sem deixar resíduos. Além de limpar, deixa um agradável e duradouro perfume de limpeza no ar, mantendo sua casa fresca e acolhedora.",
+  }
 ];
 
 export default produtos;

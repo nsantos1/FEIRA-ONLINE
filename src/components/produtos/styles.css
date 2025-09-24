@@ -49,7 +49,7 @@
 }
 
 .product-card-container:hover .product-card-image img {
-  transform: scale(1.05); /* Efeito de zoom sutil */
+  transform: scale(1.05); 
 }
 
 
@@ -68,8 +68,15 @@
   font-size: 1rem;
   font-weight: 600;
   color: var(--cor-primaria-fonte);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem; 
   height: 40px;
+}
+
+.product-card-store {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--cor-secundaria-fonte);
+  margin-bottom: 0.75rem;
 }
 
 .product-card-price {
