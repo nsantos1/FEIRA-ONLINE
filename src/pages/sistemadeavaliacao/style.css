@@ -1,43 +1,34 @@
-/*
-================================================================================
-  # Variáveis e Tipografia
-================================================================================
-*/
-:root {
-  --cor-primaria: rgba(255, 250, 240);
-  --cor-secundaria: #ecebee;
-  --cor-barra-pesquisa: #6b7280;
-  --fonte-primaria: "Inter", sans-serif;
-  --fonte-secundaria: "Poppins", sans-serif;
-  --cor-primaria-fonte: #1a1a1a;
-  --cor-secundaria-fonte: #4b5563;
-  --cor-terciaria-fonte: #8d8d8d;
-  --cor-hover: #55af00;
-}
+/* ==============================================================================
+   # ESTILOS GLOBAIS
+============================================================================== */
 
 body {
-  font-family: var(--fonte-primaria);
-  color: var(--cor-primaria-fonte);
-  background-color: #ffffff;
   margin: 0;
   padding: 0;
+  font-family: var(--fonte-primaria);
+  color: var(--cor-primaria-fonte);
+  background-color: #fff;
   line-height: 1.6;
 }
 
-/*
-================================================================================
-  # Layout Geral e Componentes Base
-================================================================================
-*/
+/* ==============================================================================
+   # ESTRUTURA PRINCIPAL
+============================================================================== */
+
 .review-system-app-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+/* ==============================================================================
+   # CABEÇALHO
+============================================================================== */
+
 .cabecalho {
   background-color: var(--cor-primaria);
   padding: 1rem 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .container-cabecalho {
@@ -62,6 +53,10 @@ body {
   color: var(--cor-hover);
 }
 
+/* ==============================================================================
+   # CONTEÚDO PRINCIPAL
+============================================================================== */
+
 .review-system-main-content {
   flex: 1;
   padding: 2rem 1rem;
@@ -75,28 +70,32 @@ body {
 .review-system-product-title {
   font-size: clamp(1.8rem, 5vw, 2.5rem);
   font-weight: 700;
-  color: var(--cor-primaria-fonte);
   font-family: var(--fonte-secundaria);
   margin-bottom: 0.5rem;
 }
 
-.review-system-product-subtitle {
-  color: var(--cor-secundaria-fonte);
-  font-size: 1.1rem;
+.review-system-product-seller {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: var(--cor-terciaria-fonte);
 }
 
-.container-aplicacao {
-  background-color: var(--cor-primaria);
-  padding: 2rem;
-  border-radius: 12px;
+.review-system-product-subtitle {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: var(--cor-secundaria-fonte);
 }
+
+/* ==============================================================================
+   # DIVISOR COM TEXTO
+============================================================================== */
 
 .review-system-divider {
+  position: relative;
   border: none;
   height: 1px;
   background-color: var(--cor-secundaria);
   margin: 2rem 0;
-  position: relative;
 }
 
 .review-system-divider::before {
@@ -105,30 +104,27 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #ffffff;
+  background: #fff;
   padding: 0 1rem;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   color: var(--cor-hover);
   font-weight: 700;
-  z-index: 10;
 }
 
-/*
-================================================================================
-  # Componentes de Avaliação (Resumo e Barras)
-================================================================================
-*/
+/* ==============================================================================
+   # RESUMO DE AVALIAÇÕES
+============================================================================== */
+
 .review-system-summary {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 1.5rem;
-  margin-top: 1.5rem;
   background-color: var(--cor-hover);
-  color: #ffffff;
+  color: #fff;
   padding: 2rem;
   border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 768px) {
@@ -138,43 +134,59 @@ body {
 }
 
 .review-system-general-rating {
-  background-color: #ffffff;
+  background: #fff;
   padding: 2rem;
   border-radius: 12px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 .review-system-general-rating h2 {
-  color: var(--cor-hover);
+  color: var(--cor-primaria-fonte);
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
 
-.review-system-general-rating .review-system-score {
+.review-system-score {
   font-size: clamp(3rem, 8vw, 4rem);
   font-weight: 700;
-  line-height: 1;
-  margin: 0.5rem 0;
   color: var(--cor-hover);
+  margin: 0.5rem 0;
 }
 
 .review-system-general-rating p {
-  color: var(--cor-primaria-fonte);
   font-size: 0.9rem;
+  color: var(--cor-secundaria-fonte);
 }
 
-.review-system-general-rating .review-system-stars-container {
+/* Estrelas */
+
+.review-system-stars-container {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.review-system-star,
+.review-system-half-star {
+  font-size: 1.25rem;
   color: var(--cor-hover);
 }
+
+.review-system-empty-star {
+  font-size: 1.25rem;
+  color: var(--cor-secundaria);
+}
+
+/* ==============================================================================
+   # BARRAS DE AVALIAÇÃO
+============================================================================== */
 
 .review-system-rating-bars-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 0.75rem;
   padding: 0.5rem;
 }
@@ -183,14 +195,14 @@ body {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 0.9em;
-  color: #ffffff;
+  font-size: 0.9rem;
 }
 
-.review-system-bar-label {
+.review-system-bar-label,
+.review-system-bar-value {
   min-width: 80px;
   font-weight: 500;
-  color: #ffffff;
+  color: #fff;
 }
 
 .review-system-bar-track {
@@ -203,67 +215,29 @@ body {
 
 .review-system-bar-fill {
   height: 100%;
-  background: #ffffff;
+  background: #fff;
   border-radius: 999px;
   transition: width 0.4s ease;
 }
 
-.review-system-bar-value {
-  min-width: 40px;
-  text-align: right;
-  font-weight: 500;
-  color: #ffffff;
-}
-
-.review-system-stars-container {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-.review-system-star {
-  color: #ffffff;
-  font-size: 1.5rem;
-}
-
-.review-system-empty-star {
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 1.5rem;
-}
-/*
-================================================================================
-  # Formulário de Avaliação e Comentário
-================================================================================
-*/
-.review-system-star-selection {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.review-system-star-icon {
-  cursor: pointer;
-  transition: all 0.2s ease;
-  font-size: clamp(1.5rem, 5vw, 2rem);
-  color: var(--cor-terciaria-fonte);
-}
-
-.review-system-star-icon.ativo {
-  color: var(--cor-hover);
-}
-
-.review-system-score-text {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--cor-hover);
-  margin-left: 0.5rem;
-}
+/* ==============================================================================
+   # FORMULÁRIO DE AVALIAÇÃO
+============================================================================== */
 
 .review-system-form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   margin-top: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--cor-secundaria);
+  border-radius: 12px;
+}
+
+.review-system-form h4 {
+  margin: 0;
+  font-family: var(--fonte-secundaria);
+  color: var(--cor-primaria-fonte);
 }
 
 .review-system-form-group {
@@ -274,8 +248,8 @@ body {
 
 .rotulo-formulario {
   font-weight: 600;
-  color: var(--cor-primaria-fonte);
   font-size: 1rem;
+  color: var(--cor-primaria-fonte);
 }
 
 .review-system-name-input,
@@ -286,11 +260,10 @@ body {
   border: 1.5px solid var(--cor-secundaria);
   border-radius: 8px;
   font-size: 1rem;
-  font-family: var(--fonte-primaria);
-  resize: vertical;
-  transition: all 0.3s ease;
-  background-color: #ffffff;
+  background-color: #fff;
   color: var(--cor-primaria-fonte);
+  transition: border-color 0.3s ease;
+  resize: vertical;
 }
 
 .review-system-comment-input,
@@ -301,56 +274,99 @@ body {
 .review-system-name-input:focus,
 .review-system-comment-input:focus,
 .review-system-edit-comment-input:focus {
-  outline: none;
   border-color: var(--cor-hover);
+  outline: none;
+}
+
+.review-system-star-icon {
+  font-size: 2.2rem;
+  cursor: pointer;
+  color: var(--cor-secundaria);
+  transition: color 0.2s ease;
+}
+
+.review-system-star-icon.ativo {
+  color: var(--cor-hover);
 }
 
 .review-system-submit-button {
+  align-self: center;
+  min-width: 200px;
   padding: 1rem 2rem;
   background: var(--cor-hover);
-  color: #ffffff;
+  color: #fff;
+  font-weight: 700;
   border: none;
   border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
-  align-self: center;
   letter-spacing: 0.5px;
+  transition: background 0.3s ease;
 }
 
 .review-system-submit-button:hover {
-  background: var(--cor-secundaria-fonte);
+  background: #459a00;
 }
 
-/*
-================================================================================
-  # Lista de Comentários e Detalhes
-================================================================================
-*/
+.review-system-submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.review-system-error-message {
+  font-size: 0.9rem;
+  color: #c53030;
+  margin-top: -1rem;
+}
+
+.review-system-success-message {
+  text-align: center;
+  background-color: #e6f7d9;
+  border: 1px solid var(--cor-hover);
+  color: var(--cor-hover);
+  padding: 2rem;
+}
+
+.review-system-success-message h4 {
+  color: var(--cor-hover);
+}
+
+/* ==============================================================================
+   # LISTA DE COMENTÁRIOS
+============================================================================== */
+
 .review-system-comments-list-container {
   margin-top: 2rem;
 }
 
 .review-system-comments-list {
-  list-style: none;
-  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  list-style: none;
+  padding: 0;
 }
 
 .review-system-comment-item {
+  background: #fff;
+  color: var(--cor-primaria-fonte);
   padding: 1.5rem;
   border-radius: 12px;
-  /* CORREÇÃO: Fundo do card de comentários agora é verde */
-  background: var(--cor-hover);
-  transition: transform 0.3s ease;
+  border: 1px solid var(--cor-secundaria);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .review-system-comment-item:hover {
-  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-color: var(--cor-hover);
 }
+
+.review-system-comment-item.is-user-comment {
+  border: 3px solid var(--cor-hover);
+  padding: calc(1.5rem - 3px);
+}
+
+/* Cabeçalho do Comentário */
 
 .review-system-comment-header {
   display: flex;
@@ -370,16 +386,13 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  /* CORREÇÃO: Fundo do avatar agora é branco */
-  background: #ffffff;
+  background: var(--cor-hover);
+  color: #fff;
   display: flex;
-  align-items: center;
   justify-content: center;
-  /* CORREÇÃO: Cor do texto no avatar agora é verde */
-  color: var(--cor-hover);
+  align-items: center;
   font-weight: 700;
   font-size: 1.25rem;
-  flex-shrink: 0;
 }
 
 .review-system-user-meta {
@@ -389,87 +402,127 @@ body {
 
 .review-system-user-name {
   font-weight: 600;
-  /* CORREÇÃO: Cor do nome do usuário agora é branco */
-  color: #ffffff;
   font-size: 1.1rem;
+  color: var(--cor-hover);
 }
 
 .review-system-comment-date {
-  /* CORREÇÃO: Cor da data agora é branco */
-  color: rgba(255, 255, 255, 0.8);
   font-size: 0.85rem;
+  color: var(--cor-secundaria-fonte);
 }
 
-.review-system-comment-rating {
-  flex-shrink: 0;
-  /* CORREÇÃO: Cor das estrelas agora é branca */
-  color: #ffffff;
-}
+/* Conteúdo do Comentário */
 
 .review-system-comment-content p {
   margin: 0;
-  /* CORREÇÃO: Cor do conteúdo do comentário agora é branco */
-  color: #ffffff;
+  padding-left: 1rem;
+  font-style: italic;
+  border-left: 3px solid var(--cor-secundaria);
+  color: var(--cor-primaria-fonte);
 }
+
+/* Estrelas em Comentários */
+
+.review-system-comment-rating {
+  margin-bottom: 0.5rem;
+}
+
+.review-system-comment-rating .review-system-star,
+.review-system-comment-rating .review-system-half-star {
+  color: var(--cor-hover);
+}
+
+.review-system-comment-rating .review-system-empty-star {
+  color: var(--cor-secundaria);
+}
+
+/* ==============================================================================
+   # AÇÕES NOS COMENTÁRIOS
+============================================================================== */
 
 .review-system-comment-actions {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   margin-top: 1rem;
 }
 
 .review-system-comment-actions button {
-  background: none;
-  border: none;
-  /* CORREÇÃO: Cor dos botões de ação agora é branco */
-  color: #ffffff;
-  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
   font-size: 0.9rem;
-  transition: color 0.3s ease;
-}
-
-.review-system-comment-actions button:hover {
-  /* CORREÇÃO: Cor do hover dos botões de ação */
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background: none;
   color: var(--cor-secundaria-fonte);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.review-system-comment-actions button svg {
-  font-size: 1rem;
+.review-system-comment-actions button:hover:not(:disabled) {
+  background-color: var(--cor-secundaria);
 }
+
+.review-system-like-button.active {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-hover);
+}
+
+.review-system-dislike-button.active {
+  background-color: var(--cor-secundaria);
+  color: #c53030 ;
+}
+
+.review-system-like-button.active:hover,
+.review-system-dislike-button.active:hover {
+  background-color: #e0e0e0;
+}
+
+.review-system-report-button:hover,
+.review-system-delete-button:hover {
+  color: #c53030;
+}
+
+.review-system-edit-button:hover {
+  color: var(--cor-hover);
+}
+
+.review-system-comment-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Filtros */
 
 .review-system-comments-filters {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 0.75rem;
+  gap: 0.75rem 1.5rem;
   margin-bottom: 1.5rem;
   font-size: 1rem;
+  color: var(--cor-secundaria-fonte);
+}
+
+.review-system-comments-filters label {
+  font-weight: 600;
 }
 
 .review-system-comments-filters select {
-  padding: 0.5rem;
-  border-radius: 8px;
+  padding: 0.75rem 1rem;
   border: 1px solid var(--cor-secundaria);
-  background-color: #ffffff;
+  border-radius: 8px;
+  background: var(--cor-primaria);
+  font-family: var(--fonte-primaria);
   color: var(--cor-primaria-fonte);
+  cursor: pointer;
 }
 
-.review-system-edit-comment-input {
-  width: 100%;
-  padding: 1rem;
-  border: 1.5px solid var(--cor-secundaria);
-  border-radius: 8px;
-  font-size: 1rem;
-  font-family: var(--fonte-primaria);
-  resize: vertical;
-  min-height: 100px;
-  transition: all 0.3s ease;
-  background-color: #ffffff;
-  color: var(--cor-primaria-fonte);
-}
+/* ==============================================================================
+   # AÇÕES DE EDIÇÃO
+============================================================================== */
 
 .review-system-edit-actions {
   display: flex;
@@ -480,106 +533,56 @@ body {
 .review-system-edit-actions button {
   padding: 0.75rem 1.5rem;
   background: var(--cor-hover);
-  color: #ffffff;
+  color: #fff;
+  font-weight: 700;
   border: none;
   border-radius: 8px;
-  font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .review-system-edit-actions button:hover {
-  background: var(--cor-secundaria-fonte);
+  background: #459a00;
 }
 
-/*
-================================================================================
-  # Estilização Específica dos Botões de Ação
-================================================================================
-*/
+/* ==============================================================================
+   # MODAL DE CONFIRMAÇÃO
+============================================================================== */
 
-/* Estilo geral para todos os botões de ação */
-.review-system-comment-actions button {
-  background: none;
-  border: none;
-  color: var(--cor-secundaria-fonte); /* Cor padrão dos ícones */
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-  transition: color 0.3s ease;
-  font-weight: 600;
-  padding: 0.5rem;
-  border-radius: 8px;
-  background-color: transparent;
-}
-
-.review-system-comment-actions button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Botão Curtir */
-.review-system-like-button {
-  color: var(--cor-hover);
-}
-
-/* Botão Descurtir */
-.review-system-dislike-button {
-  color: var(--cor-secundaria-fonte);
-}
-
-/* Botão Denunciar */
-.review-system-report-button {
-  color: var(--cor-terciaria-fonte);
-}
-
-/* Botão Editar */
-.review-system-edit-button {
-  color: var(--cor-terciaria-fonte);
-}
-
-/* Botão Excluir */
-.review-system-delete-button {
-  color: var(--cor-secundaria-fonte);
-}
-
-.review-system-comment-actions button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-/*
-================================================================================
-  # Modal de Confirmação de Exclusão
-================================================================================
-*/
 .modal-confirmacao {
-  /* Fundo semitransparente que escurece a tela */
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
   padding: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
 }
 
 .modal-confirmacao-conteudo {
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   max-width: 400px;
   width: 100%;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  animation: fadeInScale 0.3s ease-out;
 }
 
-.modal-confirmacao-conteudo h3 {
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-confirmacao-conteudo h4 {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--cor-primaria-fonte);
@@ -588,9 +591,9 @@ body {
 
 .modal-confirmacao-conteudo p {
   font-size: 1rem;
+  line-height: 1.5;
   color: var(--cor-secundaria-fonte);
   margin-bottom: 2rem;
-  line-height: 1.5;
 }
 
 .modal-confirmacao-botoes {
@@ -600,29 +603,30 @@ body {
 }
 
 .modal-confirmacao-botoes button {
+  flex: 1;
   padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 8px;
   font-size: 1rem;
   font-weight: 700;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .modal-confirmacao-botoes button.cancelar {
-  background-color: var(--cor-secundaria);
+  background: var(--cor-secundaria);
   color: var(--cor-secundaria-fonte);
 }
 
 .modal-confirmacao-botoes button.cancelar:hover {
-  background-color: #e0e0e0;
+  background: #e0e0e0;
 }
 
 .modal-confirmacao-botoes button.excluir {
-  background-color: #ef4444; /* Vermelho para indicar ação destrutiva */
-  color: #ffffff;
+  background: #c53030;
+  color: #fff;
 }
 
 .modal-confirmacao-botoes button.excluir:hover {
-  background-color: #dc2626;
+  background: #9b2c2c;
 }
