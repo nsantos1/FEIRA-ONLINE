@@ -10,26 +10,27 @@ import Contato from "./pages/contato/contact.jsx";
 import Pesquisa from "./pages/pesquisa/pesquisa.jsx";
 import Produtos from "./pages/produtos/produtos.jsx";
 import SistemaDeAvaliacao from "./pages/sistemadeavaliacao/sistemadeavaliacao.jsx";
+import PaginaDoVendedor from "./pages/paginadovendedor/paginadovendedor.jsx";
+
 
 const Rotas = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/sobre" element={<About />} />
-        <Route path="/logineregistro" element={<LoginERegistro />} />
-        <Route path="/favoritos" element={<ProdutosFavoritos />} />
-        <Route path="/carrinho" element={<CarrinhoDeCompras />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/contato" element={<Contato />} />
-        <Route path="/pesquisa" element={<Pesquisa />} />
-        <Route path="/produtos" element={<Produtos />} />
-        
-        {}
-        <Route path="/avaliacoes/:id" element={<SistemaDeAvaliacao />} />
-      </Routes>
-    </BrowserRouter>
-  );
+return (
+<BrowserRouter>
+<Routes>
+<Route path="/" element={<Index />} />
+<Route path="/sobre" element={<About />} />
+<Route path="/logineregistro" element={<LoginERegistro />} />
+<Route path="/favoritos" element={<ProdutosFavoritos />} />
+<Route path="/carrinho" element={<CarrinhoDeCompras />} />
+<Route path="/blog" element={<Blog />} />
+<Route path="/contato" element={<Contato />} />
+<Route path="/pesquisa" element={<Pesquisa />} />
+<Route path="/produtos" element={<Produtos />} />
+<Route path="/avaliacoes/:id" element={<SistemaDeAvaliacao />} />
+<Route path="/vendedor/:id" element={<PaginaDoVendedor />} />
+</Routes>
+</BrowserRouter>
+ );
 };
 
 export default Rotas;
