@@ -1,0 +1,45 @@
+.main-meus-produtos section > h1 {
+    color: #056C00;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.resumo-produtos .grid-resumo-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(189px, 1fr));
+    gap: 15px;
+}
+
+.resumo-produtos .grid-resumo-produtos .grid-item-resumo-produtos {
+    border-radius: 8px; 
+    background-color: var(--cor-primaria);
+}
+
+.resumo-produtos .grid-resumo-produtos h2 {
+    color: #4c3f26;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.resumo-produtos .grid-resumo-produtos span {
+    color: #056C00;
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.gerenciamento-produtos .grid-wrapper-gerenciamento-produtos {
+    border-radius: 8px; 
+    background-color: var(--cor-primaria);
+}
+
+.header-gerenciamento-produtos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gerenciamento-produtos .grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
+    column-gap: 21px;
+    row-gap: 20px;
+}
