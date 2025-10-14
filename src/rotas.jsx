@@ -14,7 +14,7 @@ import PaginaDoVendedor from "./pages/paginadovendedor/paginadovendedor.jsx";
 
 // Páginas de acesso do Vendedor
 import MeusProdutos from "./pages/vendedor/meusProdutos/meusProdutos.jsx";
-import ChatClientes from "./pages/vendedor/chatClientes/chatClientes.jsx";
+import ChatPage from "./pages/vendedor/chatClientes/chatPage.jsx";
 
 
 const Rotas = () => {
@@ -35,7 +35,7 @@ return (
 
             {/* Rotas de acesso do Vendedor // definir melhor o nome da rota */}
             <Route path="/minha-loja/produtos" element={<MeusProdutos />} />
-            <Route path="/minha-loja/chat" element={<ChatClientes />} />
+            <Route path="/minha-loja/chat" element={<ChatPage />} />
         </Routes>
     </BrowserRouter>
  );

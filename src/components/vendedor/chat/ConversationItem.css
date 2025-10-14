@@ -1,0 +1,73 @@
+.conversation-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #e2e8f0;
+  transition: background-color 0.2s;
+}
+
+.conversation-item:hover {
+  background-color: #f7fafc;
+}
+
+.conversation-item.active {
+  background-color: #ebf8ff;
+  border-right: 3px solid #3182CE;
+}
+
+.conversation-item .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.conversation-details {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.conversation-header {
+  display: flex;
+  justify-content: space-between;
+  
+  align-items: flex-start; 
+  margin-bottom: 4px;
+}
+
+
+.participant-info-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.participant-name {
+  font-weight: 700; 
+  color: #2d3748;
+}
+
+
+.participant-job-title {
+  font-size: 13px;
+  color: #718096;
+}
+
+.last-message-time {
+  font-size: 12px;
+  color: #a0aec0;
+  
+  white-space: nowrap;
+  margin-left: 10px;
+}
+
+.last-message-preview {
+  font-size: 14px;
+  color: #718096;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  
+  padding-left: 1px;
+}
