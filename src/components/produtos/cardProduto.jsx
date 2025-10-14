@@ -1,7 +1,33 @@
 import { Link } from "react-router-dom";
+import { FaHeart, FaShoppingCart } from "react-icons/fa";
+import { useCarrinho } from "../../contexts/carrinhoContext";
+import { useFavoritos } from "../favoritos/logicaFavoritos";
 import "./styles.css";
 
 export default function CardProduto({ produto }) {
+  const { adicionarAoCarrinho } = useCarrinho();
+  const { favoritos, favoritarItem } = useFavoritos();
+  
+  const isFavorited = favoritos.includes(produto.id);
+  const isOutOfStock = produto.estoque === 0;
+
+  const handleAddToCartClick = (e) => {
+    e.preventDefault(); 
+    e.stopPropagation(); 
+    if (isOutOfStock) {
+      alert("Produto esgotado!");
+      return;
+    }
+    adicionarAoCarrinho(produto);
+    alert(`"${produto.nome.replace(/\s*\(.*\)/, "")}" adicionado ao carrinho!`);
+  };
+
+  const handleFavoriteClick = (e) => {
+    e.preventDefault(); 
+    e.stopPropagation(); 
+    favoritarItem(produto.id);
+  };
+
   return (
     <Link to={`/produto/${produto.id}`} className="product-card-link">
       <div className="product-card-container">
@@ -22,19 +48,23 @@ export default function CardProduto({ produto }) {
         </div>
 
         <div className="product-card-actions">
-          <button className="add-to-cart-button">
-            <i className="fa-solid fa-cart-shopping"></i>
-            <span>Adicionar</span>
+          <button 
+            className="add-to-cart-button"
+            onClick={handleAddToCartClick}
+            disabled={isOutOfStock}
+          >
+            <FaShoppingCart />
+            <span>{isOutOfStock ? "Esgotado" : "Adicionar"}</span>
           </button>
-          <button className="favorite-button">
-            <i className="fa-regular fa-heart"></i>
+          <button 
+            className="favorite-button"
+            onClick={handleFavoriteClick}
+            style={{ color: isFavorited ? 'var(--cor-hover)' : 'var(--cor-secundaria-fonte)' }}
+          >
+            <FaHeart style={{ color: isFavorited ? 'var(--cor-hover)' : 'inherit' }} />
           </button>
-          <Link to={`/avaliacoes/${produto.id}`} className="view-reviews-button">
-            <span>Avaliações</span>
-          </Link>
         </div>
       </div>
     </Link>
   );
 }
-

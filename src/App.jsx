@@ -1,10 +1,12 @@
 import "./App.css";
 import Rotas from "./rotas.jsx";
-
+import { CarrinhoProvider } from "./contexts/carrinhoContext";
 
 function App() {
   return (
-    <Rotas />
+    <CarrinhoProvider>
+      <Rotas />
+    </CarrinhoProvider>
   );
 }
 

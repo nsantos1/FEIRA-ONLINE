@@ -1,3 +1,5 @@
+import { useCarrinho } from "../../contexts/carrinhoContext";
+
 export default function CardProdutoFavorito({
   produtoFoto,
   produtoCategoria,
@@ -5,7 +7,21 @@ export default function CardProdutoFavorito({
   produtoNumAvaliacoes,
   produtoPrecoOriginal,
   produtoPrecoAtual,
+  onRemoveFavorite,
+  produtoId
 }) {
+  const { adicionarAoCarrinho, todosProdutos } = useCarrinho();
+  
+  const handleAddToCart = () => {
+    const produto = todosProdutos.find(p => p.id === produtoId);
+    if (produto) {
+        adicionarAoCarrinho(produto);
+        alert(`"${produtoTitulo.replace(/\s*\(.*\)/, "")}" adicionado ao carrinho!`);
+    } else {
+        alert("Produto não encontrado no catálogo.");
+    }
+  };
+
   return (
     <div className="card-produto-favorito">
       <img
@@ -21,19 +37,19 @@ export default function CardProdutoFavorito({
         <div className="avaliacao-produto-favorito">
           <div className="estrelas-avaliacao-produto-favorito">
             <div className="estrela-avaliacao">
-              <i class="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
             </div>
             <div className="estrela-avaliacao">
-              <i class="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
             </div>
             <div className="estrela-avaliacao">
-              <i class="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
             </div>
             <div className="estrela-avaliacao">
-              <i class="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
             </div>
             <div className="estrela-avaliacao">
-              <i class="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
             </div>
           </div>
           <div className="label-total-avaliacoes">
@@ -48,10 +64,10 @@ export default function CardProdutoFavorito({
         <p>À vista no Pix</p>
       </div>
       <div className="acoes-produto-favorito">
-        <i class="fa-solid fa-heart"></i>
-        <button>
+        <i className="fa-solid fa-heart" onClick={onRemoveFavorite}></i>
+        <button onClick={handleAddToCart}>
           <div className="botao-acoes-produto-favorito">
-            <i class="fa-solid fa-cart-shopping"></i>
+            <i className="fa-solid fa-cart-shopping"></i>
             <h3>COMPRAR</h3>
           </div>
         </button>

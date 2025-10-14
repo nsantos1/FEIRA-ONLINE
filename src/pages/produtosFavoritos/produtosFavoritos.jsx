@@ -1,10 +1,33 @@
+import { useMemo } from "react";
 import "./styles.css";
 import Footer from "../../components/footer/footer";
 import Header from "../../components/header/header";
 import SemProdutosFavoritos from "../../components/produtosFavoritos/divSemProdutosFavoritos";
 import CardProdutoFavorito from "../../components/produtosFavoritos/cardProdutoFavorito";
+import { useFavoritos } from "../../components/favoritos/logicaFavoritos";
+import todosProdutos from "../../data/produtos"; 
 
 export default function ProdutosFavoritos() {
+  const { favoritos, favoritarItem } = useFavoritos();
+
+  const produtosFavoritados = useMemo(() => {
+    return todosProdutos.filter(produto => favoritos.includes(produto.id));
+  }, [favoritos]);
+  
+  const handleToggleFavorite = (id) => {
+      favoritarItem(id);
+  }
+
+  const getRatingInfo = (produto) => {
+      const avaliacoes = produto.avaliacoes || [];
+      const media = avaliacoes.reduce((acc, a) => acc + (Number(a.nota) || 0), 0) / (avaliacoes.length || 1);
+      
+      return {
+          media,
+          total: avaliacoes.length
+      };
+  }
+
   return (
     <>
       <Header />
@@ -12,53 +35,37 @@ export default function ProdutosFavoritos() {
         <div className="main-content-favoritos">
           <div className="titulo-favoritos">
             <span>
-              <i class="fa-solid fa-heart"></i>
+              <i className="fa-solid fa-heart"></i>
             </span>
-            <h2>FAVORITOS</h2>
+            <h2>FAVORITOS ({produtosFavoritados.length})</h2>
           </div>
-          <SemProdutosFavoritos />
-          <div className="lista-produtos-favoritos">
-            <CardProdutoFavorito
-              produtoFoto={
-                "https://images.unsplash.com/photo-1587334206596-c0f9f7dccbe6?q=80&w=881&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              }
-              produtoCategoria={"Frutas"}
-              produtoTitulo={"Cacho de banana prata, 1kg"}
-              produtoNumAvaliacoes={"39"}
-              produtoPrecoOriginal={"15,99"}
-              produtoPrecoAtual={"9,90"}
-            />
-            <CardProdutoFavorito
-              produtoFoto={
-                "https://images.unsplash.com/photo-1678942946279-c83e37f32304?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              }
-              produtoCategoria={"Frutas"}
-              produtoTitulo={"Maçã verde, 1kg"}
-              produtoNumAvaliacoes={"21"}
-              produtoPrecoOriginal={"13,90"}
-              produtoPrecoAtual={"11,90"}
-            />
-            <CardProdutoFavorito
-              produtoFoto={
-                "https://images.unsplash.com/photo-1615485925763-86786288908a?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              }
-              produtoCategoria={"Frutas"}
-              produtoTitulo={"Cacho de uvas sem sementes, Unidade"}
-              produtoNumAvaliacoes={"80"}
-              produtoPrecoOriginal={"9,90"}
-              produtoPrecoAtual={"8,90"}
-            />
-            <CardProdutoFavorito
-              produtoFoto={
-                "https://images.unsplash.com/photo-1615485925763-86786288908a?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              }
-              produtoCategoria={"Frutas"}
-              produtoTitulo={"Cacho de uvas sem sementes, Unidade"}
-              produtoNumAvaliacoes={"80"}
-              produtoPrecoOriginal={"9,90"}
-              produtoPrecoAtual={"8,90"}
-            />
-          </div>
+          
+          {produtosFavoritados.length === 0 ? (
+            <SemProdutosFavoritos />
+          ) : (
+            <div className="lista-produtos-favoritos">
+              {produtosFavoritados.map((produto) => {
+                const ratingInfo = getRatingInfo(produto);
+                // Gera um preço "original" um pouco maior que o atual para simular desconto
+                const precoOriginal = produto.preco * 1.2; 
+                const precoFormatado = (valor) => valor.toFixed(2).replace('.', ',');
+
+                return (
+                  <CardProdutoFavorito
+                    key={produto.id}
+                    produtoId={produto.id} 
+                    produtoFoto={produto.imagem}
+                    produtoCategoria={produto.categoria}
+                    produtoTitulo={produto.nome}
+                    produtoNumAvaliacoes={ratingInfo.total}
+                    produtoPrecoOriginal={precoFormatado(precoOriginal)} 
+                    produtoPrecoAtual={precoFormatado(produto.preco)}
+                    onRemoveFavorite={() => handleToggleFavorite(produto.id)}
+                  />
+                );
+              })}
+            </div>
+          )}
         </div>
       </main>
       <Footer />

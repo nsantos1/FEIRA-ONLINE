@@ -11,6 +11,7 @@ import Pesquisa from "./pages/pesquisa/pesquisa.jsx";
 import Produtos from "./pages/produtos/produtos.jsx";
 import SistemaDeAvaliacao from "./pages/sistemadeavaliacao/sistemadeavaliacao.jsx";
 import PaginaDoVendedor from "./pages/paginadovendedor/paginadovendedor.jsx";
+import DetalhesDoProduto from "./pages/detalhesDoProduto/detalhesDoProduto.jsx";
 
 // Páginas de acesso do Vendedor
 import MeusProdutos from "./pages/vendedor/meusProdutos/meusProdutos.jsx";
@@ -32,6 +33,7 @@ return (
             <Route path="/produtos" element={<Produtos />} />
             <Route path="/avaliacoes/:id" element={<SistemaDeAvaliacao />} />
             <Route path="/vendedor/:id" element={<PaginaDoVendedor />} />
+            <Route path="/produto/:id" element={<DetalhesDoProduto />} />
 
             {/* Rotas de acesso do Vendedor // definir melhor o nome da rota */}
             <Route path="/minha-loja/produtos" element={<MeusProdutos />} />

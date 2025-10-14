@@ -1,23 +1,37 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 export function useFavoritos() {
-  const [favoritos, setFavoritos] = useState([]);
-
-  useEffect(() => {
-    const favs = JSON.parse(localStorage.getItem("favoritos")) || [];
-    setFavoritos(favs);
-  }, []);
-
-  const favoritarItem = (id) => {
-    let atualizados;
-    if (favoritos.includes(id)) {
-      atualizados = favoritos.filter((fav) => fav !== id);
-    } else {
-      atualizados = [...favoritos, id];
+  const [favoritos, setFavoritos] = useState(() => {
+    try {
+      const storedFavs = localStorage.getItem("favoritos");
+      // Certifica que o localStorage retorna um array
+      return storedFavs ? JSON.parse(storedFavs) : [];
+    } catch (e) {
+      console.error("Erro ao carregar favoritos do localStorage", e);
+      return [];
     }
-    setFavoritos(atualizados);
-    localStorage.setItem("favoritos", JSON.stringify(atualizados));
-  };
+  });
+
+  // Salva no localStorage sempre que 'favoritos' muda
+  useEffect(() => {
+    try {
+      localStorage.setItem("favoritos", JSON.stringify(favoritos));
+    } catch (e) {
+      console.error("Erro ao salvar favoritos no localStorage", e);
+    }
+  }, [favoritos]);
+
+  const favoritarItem = useCallback((id) => {
+    setFavoritos((prev) => {
+      // Se já inclui, remove (desfavorita)
+      if (prev.includes(id)) {
+        return prev.filter((fav) => fav !== id);
+      } else {
+        // Se não inclui, adiciona (favorita)
+        return [...prev, id];
+      }
+    });
+  }, []);
 
   return { favoritos, favoritarItem };
 }
