@@ -1,15 +1,23 @@
 import "./sidebarDashboard.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom"; // Importa useLocation
 
 export default function SidebarDashboard() {
+  const location = useLocation(); // Hook para saber a rota atual
+  const currentPath = location.pathname;
+
+  const isActive = (path) => currentPath === path;
+  
+  // URL da imagem local (assumindo que a imagem está na raiz de assets/images/fotovendedor)
+  const fotoPerfilPath = "src/assets/images/fotovendedor/fotoPerfil.png";
+
   return (
     <div className="container-sidebar-dashboard">
       <div>
         <div className="sidebar-info-vendedor">
           <div>
             <img
-              src="..\src\assets\images\fotovendedor\fotoPerfil.png"
-              alt=""
+              src={fotoPerfilPath}
+              alt="Foto de Perfil do Vendedor"
             />
           </div>
           <div>
@@ -18,33 +26,33 @@ export default function SidebarDashboard() {
           </div>
         </div>
         <div className="sidebar-nav-itens">
-          <Link>
-            <div className="sidebar-nav-item">
-              <i class="fa-regular fa-house"></i>
+          <Link to={"/minha-loja"}>
+            <div className={`sidebar-nav-item ${isActive("/minha-loja") ? "sidebar-active" : ""}`}>
+              <i className="fa-regular fa-house"></i>
               <p>Dashboard</p>
             </div>
           </Link>
-          <Link>
-            <div className="sidebar-nav-item">
-              <i class="fa-solid fa-chart-simple"></i>
+          <Link to={"/minha-loja/vendas"}>
+            <div className={`sidebar-nav-item ${isActive("/minha-loja/vendas") ? "sidebar-active" : ""}`}>
+              <i className="fa-solid fa-chart-simple"></i>
               <p>Vendas</p>
             </div>
           </Link>
-          <Link>
-            <div className="sidebar-nav-item">
-              <i class="fa-solid fa-box-open"></i>
+          <Link to={"/minha-loja/pedidos"}> {/* Rota de Pedidos, ainda a ser implementada */}
+            <div className={`sidebar-nav-item ${isActive("/minha-loja/pedidos") ? "sidebar-active" : ""}`}>
+              <i className="fa-solid fa-box-open"></i>
               <p>Pedidos</p>
             </div>
           </Link>
           <Link to={"/minha-loja/produtos"}>
-            <div className="sidebar-nav-item">
-              <i class="fa-solid fa-bag-shopping"></i>
+            <div className={`sidebar-nav-item ${isActive("/minha-loja/produtos") ? "sidebar-active" : ""}`}>
+              <i className="fa-solid fa-bag-shopping"></i>
               <p>Produtos</p>
             </div>
           </Link>
           <Link to={"/minha-loja/chat"}>
-            <div className="sidebar-nav-item">
-              <i class="fa-regular fa-comment"></i>
+            <div className={`sidebar-nav-item ${isActive("/minha-loja/chat") ? "sidebar-active" : ""}`}>
+              <i className="fa-regular fa-comment"></i>
               <p>Chat</p>
             </div>
           </Link>
@@ -53,7 +61,7 @@ export default function SidebarDashboard() {
       <div>
         <Link to={"/"}>
           <div className="sidebar-sair">
-            <i class="fa-solid fa-right-from-bracket"></i>
+            <i className="fa-solid fa-right-from-bracket"></i>
             <p>Voltar para a página inicial</p>
           </div>
         </Link>

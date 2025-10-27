@@ -11,10 +11,12 @@ import Pesquisa from "./pages/pesquisa/pesquisa.jsx";
 import Produtos from "./pages/produtos/produtos.jsx";
 import SistemaDeAvaliacao from "./pages/sistemadeavaliacao/sistemadeavaliacao.jsx";
 import PaginaDoVendedor from "./pages/paginadovendedor/paginadovendedor.jsx";
+import VendasPage from "./pages/vendedor/vendas/vendaspage.jsx";
 
 // Páginas de acesso do Vendedor
 import MeusProdutos from "./pages/vendedor/meusProdutos/meusProdutos.jsx";
 import ChatPage from "./pages/vendedor/chatClientes/chatPage.jsx";
+import DashboardPage from "./pages/vendedor/dashboard/dashboardPage.jsx"; 
 
 
 const Rotas = () => {
@@ -33,9 +35,11 @@ return (
             <Route path="/avaliacoes/:id" element={<SistemaDeAvaliacao />} />
             <Route path="/vendedor/:id" element={<PaginaDoVendedor />} />
 
-            {/* Rotas de acesso do Vendedor // definir melhor o nome da rota */}
+            {/* Rotas de acesso do Vendedor */}
+            <Route path="/minha-loja" element={<DashboardPage />} /> 
             <Route path="/minha-loja/produtos" element={<MeusProdutos />} />
             <Route path="/minha-loja/chat" element={<ChatPage />} />
+            <Route path="/minha-loja/vendas" element={<VendasPage />} />
         </Routes>
     </BrowserRouter>
  );
