@@ -12,7 +12,7 @@ export default function ProdutosFavoritos() {
         <div className="main-content-favoritos">
           <div className="titulo-favoritos">
             <span>
-              <i class="fa-solid fa-heart"></i>
+              <i className="fa-solid fa-heart"></i>
             </span>
             <h2>FAVORITOS</h2>
           </div>

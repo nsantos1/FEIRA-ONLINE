@@ -92,13 +92,13 @@ export default function About() {
             </div>
           </div>
           <hr />
-          <div class="video-pitch">
+          <div className="video-pitch">
             <h3>Vídeo Pitch</h3>
             <div>
               <a
                 href="https://www.youtube.com/shorts/zJ5Cd0wd7vI"
                 target="_blank"
-                class="banner-youtube"
+                className="banner-youtube"
               >
                 <img src="https://www.fiap.com.br/wp-content/themes/fiap2016/images/sharing/fiap.png" alt="Assista no YouTube" />
               </a>

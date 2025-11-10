@@ -21,19 +21,19 @@ export default function CardProdutoFavorito({
         <div className="avaliacao-produto-favorito">
           <div className="estrelas-avaliacao-produto-favorito">
             <div className="estrela-avaliacao">
-              <i class="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
             </div>
             <div className="estrela-avaliacao">
-              <i class="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
             </div>
             <div className="estrela-avaliacao">
-              <i class="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
             </div>
             <div className="estrela-avaliacao">
-              <i class="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
             </div>
             <div className="estrela-avaliacao">
-              <i class="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
             </div>
           </div>
           <div className="label-total-avaliacoes">
@@ -48,10 +48,10 @@ export default function CardProdutoFavorito({
         <p>À vista no Pix</p>
       </div>
       <div className="acoes-produto-favorito">
-        <i class="fa-solid fa-heart"></i>
+        <i className="fa-solid fa-heart"></i>
         <button>
           <div className="botao-acoes-produto-favorito">
-            <i class="fa-solid fa-cart-shopping"></i>
+            <i className="fa-solid fa-cart-shopping"></i>
             <h3>COMPRAR</h3>
           </div>
         </button>
