@@ -61,7 +61,7 @@
 }
 
 
-.tab-button--active {
+.login-card__tabs .tab-button--active {
   color: var(--cor-hover);
   border-bottom-color: var(--cor-hover);
 }
