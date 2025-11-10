@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ConversationsList from "../../../components/vendedor/chat/conversationsList.jsx";
-import ChatWindow from "../../../components/vendedor/chat/ChatWindow.jsx";
+import ChatWindow from "../../../components/vendedor/chat/chatWindow.jsx";
 import ChatPlaceholder from "../../../components/vendedor/chat/chatPlaceholder.jsx";
 import { chatData } from "../../../data/chatData.js";
 import "./chatPage.css";

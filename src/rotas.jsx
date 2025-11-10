@@ -11,7 +11,7 @@ import Pesquisa from "./pages/pesquisa/pesquisa.jsx";
 import Produtos from "./pages/produtos/produtos.jsx";
 import SistemaDeAvaliacao from "./pages/sistemadeavaliacao/sistemadeavaliacao.jsx";
 import PaginaDoVendedor from "./pages/paginadovendedor/paginadovendedor.jsx";
-import VendasPage from "./pages/vendedor/vendas/vendaspage.jsx";
+import VendasPage from "./pages/vendedor/vendas/vendasPage.jsx";
 
 // Páginas de acesso do Vendedor
 import MeusProdutos from "./pages/vendedor/meusProdutos/meusProdutos.jsx";

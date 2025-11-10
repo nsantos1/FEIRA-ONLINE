@@ -3,7 +3,7 @@ import React from 'react';
 import { FaPaperPlane, FaPlus, FaRegStar, FaStar } from 'react-icons/fa';
 import { FiMoreVertical } from 'react-icons/fi';
 import { IoClose } from 'react-icons/io5';
-import './ChatWindow.css';
+import './chatWindow.css';
 
 
 function MessageBubble({ message, isSender }) {
