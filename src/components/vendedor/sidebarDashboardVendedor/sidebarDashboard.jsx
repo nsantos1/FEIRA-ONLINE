@@ -1,14 +1,15 @@
-import "./sidebarDashboard.css";
 import { Link, useLocation } from "react-router-dom"; // Importa useLocation
+
+// URL da imagem local (assumindo que a imagem está na raiz de assets/images/fotovendedor)
+import fotoPerfilPath from "../../../assets/images/fotovendedor/fotoPerfil.png";
+
+import "./sidebarDashboard.css";
 
 export default function SidebarDashboard() {
   const location = useLocation(); // Hook para saber a rota atual
   const currentPath = location.pathname;
 
   const isActive = (path) => currentPath === path;
-  
-  // URL da imagem local (assumindo que a imagem está na raiz de assets/images/fotovendedor)
-  const fotoPerfilPath = "src/assets/images/fotovendedor/fotoPerfil.png";
 
   return (
     <div className="container-sidebar-dashboard">
