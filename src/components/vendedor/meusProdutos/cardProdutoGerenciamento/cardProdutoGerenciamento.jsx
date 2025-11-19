@@ -1,6 +1,10 @@
 import { FaPencilAlt, FaRegTrashAlt } from "react-icons/fa";
 
+<<<<<<< HEAD
 import "../cardProdutoGerenciamento/cardProdutoGerenciamento.css";
+=======
+import "./cardProdutoGerenciamento.css"
+>>>>>>> homolog
 
 export default function CardProdutoGerenciamento({ produto }) {
     return (
@@ -8,8 +12,8 @@ export default function CardProdutoGerenciamento({ produto }) {
             <div className="header-produto">
                 <div className="status">{produto.status}</div>
                 <div className="gerenciamento-btns">
-                    <button><FaPencilAlt /></button>
-                    <button><FaRegTrashAlt /></button>
+                    <button className="btn-editar"><FaPencilAlt /></button>
+                    <button className="btn-excluir"><FaRegTrashAlt /></button>
                 </div>
             </div>
             <img src={produto.imagem} alt={`Imagem do produto: ${produto.nome}`} />

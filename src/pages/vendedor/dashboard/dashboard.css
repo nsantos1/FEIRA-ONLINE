@@ -1,0 +1,298 @@
+/* --- Variáveis de Tema (alinhadas ao tema verde) --- */
+:root {
+  --cor-principal: #1a1a1a;
+  --cor-secundaria-fonte: #4b5563;
+  --cor-terciaria: #8d8d8d;
+  --cinza-claro: #e2e8f0;
+  --cor-background: #f9fafb; /* Fundo suave */
+  --cor-verde-principal: #078C00;
+  --cor-verde-claro: #4CAF50;
+  --cor-verde-medio: #8BC34A;
+}
+
+/* --- Layout Principal --- */
+.main-dashboard-kpi {
+  display: flex;
+  background-color: var(--cor-background);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.dashboard-kpi-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: 100vh;
+  padding: 2rem;
+  color: var(--cor-principal);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--cor-verde-principal);
+  margin: 0;
+}
+
+.dashboard-filters {
+  display: flex;
+  gap: 15px;
+}
+
+.dashboard-filters select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--cinza-claro);
+  background-color: #fff;
+  color: var(--cor-secundaria-fonte);
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+.dashboard-filters select:focus {
+  border-color: var(--cor-verde-principal);
+  outline: none;
+}
+
+/* --- KPI Cards --- */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.kpi-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-left: 5px solid var(--kpi-color, #078C00); /* Cor dinâmica */
+    transition: transform 0.3s ease;
+}
+
+.kpi-card:hover {
+    transform: translateY(-5px);
+}
+
+.kpi-icon-wrapper {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.75rem;
+    border-radius: 50%;
+    background-color: rgba(7, 140, 0, 0.1); 
+}
+.kpi-card:nth-child(2) .kpi-icon-wrapper { background-color: rgba(76, 175, 80, 0.1); }
+.kpi-card:nth-child(3) .kpi-icon-wrapper { background-color: rgba(255, 193, 7, 0.1); }
+.kpi-card:nth-child(4) .kpi-icon-wrapper { background-color: rgba(49, 130, 206, 0.1); }
+
+
+.kpi-icon {
+    font-size: 1.5rem;
+    color: var(--kpi-color, #078C00);
+}
+
+.kpi-info {
+    margin-top: 1rem;
+}
+
+.kpi-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--cor-secundaria-fonte);
+    margin-bottom: 0.5rem;
+}
+
+.kpi-value-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.kpi-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--cor-principal);
+    line-height: 1;
+}
+
+.kpi-unit {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--cor-secundaria-fonte);
+    margin-bottom: 2px;
+}
+
+.kpi-change {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+.kpi-change-period {
+    font-weight: 400;
+    color: var(--cor-terciaria);
+    margin-left: 5px;
+}
+
+/* --- Charts Grid --- */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.chart-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s;
+}
+
+.chart-container:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container h3 {
+  margin: 0 0 20px 0;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: left;
+  color: var(--cor-principal);
+}
+
+
+.chart-container.full-width {
+  grid-column: 1 / -1;
+}
+
+/* --- Tabela de Atividades Recentes (Pedidos) --- */
+.recent-activities-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-top: 25px;
+}
+
+.recent-activities-container h3 {
+  margin: 0 0 20px 0;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: left;
+  color: var(--cor-principal);
+}
+
+.activities-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.activities-table th,
+.activities-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.9rem;
+}
+
+.activities-table th {
+  font-weight: 600;
+  color: var(--cor-secundaria-fonte);
+  background-color: #f7f7f7;
+}
+
+.activities-table td {
+  color: var(--cor-secundaria-fonte);
+}
+.activities-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.status-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    min-width: 90px;
+    text-transform: uppercase;
+}
+
+/* Cores dos Status (ajustadas para o tema verde) */
+.status-resolvido, .status-dentro-do-prazo, .status-entregue { 
+    background-color: var(--cor-verde-claro); /* Verde sucesso */
+} 
+.status-em-atendimento, .status-em-separação, .status-em-transporte { 
+    background-color: #3182CE; /* Azul para andamento */
+}
+.status-fora-do-prazo, .status-aguardando-pagamento { 
+    background-color: #E53E3E; /* Vermelho para alerta */
+}
+
+
+/* --- Responsividade --- */
+
+@media (max-width: 1200px) {
+    .charts-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .chart-container.full-width {
+        grid-column: 1 / -1;
+    }
+    .kpi-grid {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-kpi-content {
+        padding: 1.5rem;
+    }
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .dashboard-filters {
+        width: 100%;
+    }
+    .dashboard-filters select {
+        flex: 1;
+    }
+    .kpi-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+    .activities-table th, .activities-table td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-kpi-content {
+        padding: 1rem;
+    }
+    .kpi-grid {
+        grid-template-columns: 1fr;
+    }
+    .dashboard-filters {
+        flex-direction: column;
+    }
+}

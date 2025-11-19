@@ -23,7 +23,7 @@ export default function Header() {
   };
 
   return (
-    <header>
+    <header className="header-principal">
       <div className="linha-1-header">
         <Link className="logo" to="/">FeiraOnline.</Link>
         <input

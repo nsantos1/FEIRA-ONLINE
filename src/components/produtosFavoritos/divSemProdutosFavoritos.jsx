@@ -2,7 +2,7 @@ export default function SemProdutosFavoritos() {
   return (
     <div className="sem-produtos-favoritos">
       <i>
-        <i class="fa-solid fa-heart-crack"></i>
+        <i className="fa-solid fa-heart-crack"></i>
       </i>
       <h2>Opa!</h2>
       <h3>

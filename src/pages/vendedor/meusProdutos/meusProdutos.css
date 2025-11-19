@@ -1,7 +1,27 @@
+.main-meus-produtos {
+    display: flex;
+    background-color: var(--cor-background);
+    height: 100vh;
+    overflow: hidden;
+}
+
 .main-meus-produtos section > h1 {
     color: #056C00;
     font-weight: 800;
     font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.meus-produtos-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 100vh;
+    padding: 2rem;
+    color: var(--cor-principal);
+}
+
+.resumo-produtos {
+    margin-bottom: 32px;
 }
 
 .resumo-produtos .grid-resumo-produtos {
@@ -13,6 +33,7 @@
 .resumo-produtos .grid-resumo-produtos .grid-item-resumo-produtos {
     border-radius: 8px; 
     background-color: var(--cor-primaria);
+    padding: 12px 16px;
 }
 
 .resumo-produtos .grid-resumo-produtos h2 {
@@ -30,16 +51,144 @@
 .gerenciamento-produtos .grid-wrapper-gerenciamento-produtos {
     border-radius: 8px; 
     background-color: var(--cor-primaria);
+    padding: 12px 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.gerenciamento-produtos .grid-wrapper-gerenciamento-produtos > div {
+    width: 100%;
+}
+
 
 .header-gerenciamento-produtos {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+
+    margin-bottom: 23px;
+}
+
+.header-gerenciamento-produtos .adicionar-produto {
+    color: white;
+    background-color: var(--cor-verde-principal);
+    border-radius: 8px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.header-gerenciamento-produtos .adicionar-produto:hover {
+    cursor: pointer;
+}
+
+.header-gerenciamento-produtos .filtros-meus-produtos {
+    display: flex;
+    gap: 15px;
+}
+
+.header-gerenciamento-produtos .filtros-meus-produtos > div {
+    color: #4c3f26;
+    background-color: white;
+    border: #078c0040 1px solid;
+    border-radius: 8px;
+}
+
+.header-gerenciamento-produtos .buscar-produto-wrapper {
+    color: #4c3f2680;
+    padding: 7px 8px;
+    gap: 5px;
+
+    display: flex;
+    align-items: center;
+}
+
+.header-gerenciamento-produtos .custom-select-meus-produtos {
+    position: relative;
+    width: 110px;
+    cursor: pointer;
+}
+
+.header-gerenciamento-produtos .custom-select-meus-produtos .custom-select-selected-meus-produtos {
+    padding: 7px 8px;
+}
+
+.header-gerenciamento-produtos .custom-select-meus-produtos .custom-select-selected-meus-produtos:hover {
+    background-color: #fafafa;
+}
+
+.header-gerenciamento-produtos .custom-select-meus-produtos .custom-select-options-meus-produtos {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: #078c0040 1px solid;
+    border-radius: 8px;
+    background-color: var(--cor-primaria);
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1000;
+    margin-top: 2px;
+}
+
+
+.header-gerenciamento-produtos .custom-select-meus-produtos .custom-select-options-meus-produtos::-webkit-scrollbar {
+    display: none;
+}
+
+.header-gerenciamento-produtos .custom-select-meus-produtos .custom-select-options-meus-produtos .custom-select-option-meus-produtos {
+    padding: 7px 8px;
+    cursor: pointer;
+}
+
+.header-gerenciamento-produtos .custom-select-meus-produtos .custom-select-options-meus-produtos .custom-select-option-meus-produtos:hover {
+    background-color: rgb(250, 240, 230);
 }
 
 .gerenciamento-produtos .grid-produtos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
+    grid-template-columns: repeat(5, minmax(195px, 1fr));
     column-gap: 21px;
     row-gap: 20px;
+}
+
+.footer-gerenciamento-produtos {
+    display: flex;
+    gap: 5px;
+
+    margin-top: 27px;
+}
+
+.footer-gerenciamento-produtos button {
+    color: #4c3f26;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 900;
+
+    height: 24px;
+    width: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-gerenciamento-produtos button:hover {
+    cursor: pointer;
+}
+
+.footer-gerenciamento-produtos .numeros-da-pagina-btn {
+    display: flex;
+}
+
+.footer-gerenciamento-produtos .numeros-da-pagina-btn button.active {
+    color: white;
+    background-color: var(--cor-verde-principal);
+    border-radius: 50%;
 }
