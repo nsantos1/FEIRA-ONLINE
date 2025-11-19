@@ -11,11 +11,7 @@ import Pesquisa from "./pages/pesquisa/pesquisa.jsx";
 import Produtos from "./pages/produtos/produtos.jsx";
 import SistemaDeAvaliacao from "./pages/sistemadeavaliacao/sistemadeavaliacao.jsx";
 import PaginaDoVendedor from "./pages/paginadovendedor/paginadovendedor.jsx";
-<<<<<<< HEAD
-import DetalhesDoProduto from "./pages/detalhesDoProduto/detalhesDoProduto.jsx";
-=======
 import VendasPage from "./pages/vendedor/vendas/vendasPage.jsx";
->>>>>>> homolog
 
 // Páginas de acesso do Vendedor
 import MeusProdutos from "./pages/vendedor/meusProdutos/meusProdutos.jsx";
