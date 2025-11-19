@@ -12,6 +12,7 @@ import Produtos from "./pages/produtos/produtos.jsx";
 import SistemaDeAvaliacao from "./pages/sistemadeavaliacao/sistemadeavaliacao.jsx";
 import PaginaDoVendedor from "./pages/paginadovendedor/paginadovendedor.jsx";
 import VendasPage from "./pages/vendedor/vendas/vendasPage.jsx";
+import DetalhesDoProduto from "./pages/detalhesDoProduto/detalhesDoProduto.jsx";
 
 // Páginas de acesso do Vendedor
 import MeusProdutos from "./pages/vendedor/meusProdutos/meusProdutos.jsx";
