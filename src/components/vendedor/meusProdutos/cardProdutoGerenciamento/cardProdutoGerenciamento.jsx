@@ -1,10 +1,6 @@
 import { FaPencilAlt, FaRegTrashAlt } from "react-icons/fa";
 
-<<<<<<< HEAD
-import "../cardProdutoGerenciamento/cardProdutoGerenciamento.css";
-=======
 import "./cardProdutoGerenciamento.css"
->>>>>>> homolog
 
 export default function CardProdutoGerenciamento({ produto }) {
     return (

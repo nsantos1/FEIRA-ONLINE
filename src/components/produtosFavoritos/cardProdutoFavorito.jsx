@@ -64,13 +64,8 @@ export default function CardProdutoFavorito({
         <p>À vista no Pix</p>
       </div>
       <div className="acoes-produto-favorito">
-<<<<<<< HEAD
-        <i className="fa-solid fa-heart" onClick={onRemoveFavorite}></i>
-        <button onClick={handleAddToCart}>
-=======
         <i className="fa-solid fa-heart"></i>
         <button>
->>>>>>> homolog
           <div className="botao-acoes-produto-favorito">
             <i className="fa-solid fa-cart-shopping"></i>
             <h3>COMPRAR</h3>
